@@ -1,6 +1,6 @@
 An Online Matching App for Gamers looking for a partner, or a friend to share the fun.
 
-SWE-6813, Winter 2022 Development Project: GamersMeet Team Members: Jerry Cowell Jr, Steven Carter, Takyi Obeng , Kyla Okobah
+SWE-6813, Winter 2022 Development Project: GamersMeet Team Members: Frank Wear, Jerry Cowell Jr, Steven Carter, Takyi Obeng , Kyla Okobah
 Scrum Roles:
 
 Product Owner - Takyi Obeng
