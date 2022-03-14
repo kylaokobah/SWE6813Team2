@@ -1,12 +1,18 @@
-An Online Match-Maker App for Gamers looking for a partner, or a friend to share the fun.
+An Online Matching App for Gamers looking for a partner, or a friend to share the fun.
 
 SWE-6813, Winter 2022 Development Project: GamersMeet Team Members: Jerry Cowell Jr, Steven Carter, Takyi Obeng , Kyla Okobah
-Scrum Roles: Product Owner - Hugh Sheridan Scrum Master – Jerry Cowell Jr. Lead Developer – Steven Carter Developers – Takyi Obeng, Kyla Okobah
+Scrum Roles:
 
-    Project Metrics:
+Product Owner - Takyi Obeng
+Scrum Master – Frank Wear
+Technical Lead for Operations and Development - Kyla Okobah
+Lead for Front-End Development - Jerry Cowell Jr.
+Lead for Back-end Development - Steven Carver
+
+Project Metrics:
 Prioritization method to be used to prioritize the entire backlog: https://www.scaledagileframework.com/wsjf/ 
-Priorities:
 
+Priorities:
 If the assigned priority confliect with the WSJF calcuation or is not deliverable in a single sprint, the product owner and team will negotiate the work and potentially break the item into smaller work items.
 
 Priority 1 - Critical - Items marked as Critical should ideally be addressed first.
