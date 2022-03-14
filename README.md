@@ -80,7 +80,7 @@ Board – https://dev.azure.com/SWE6813/GamersMeet/_boards/board/t/GamersMeet%20
 Project Backlog – https://dev.azure.com/SWE6813/GamersMeet/_backlogs/backlog/GamersMeet%20Team/Stories/?showParents=true
 Sprint – https://dev.azure.com/SWE6813/GamersMeet/_sprints/taskboard/GamersMeet%20Team/GamersMeet/Sprint%201
 Repository – https://dev.azure.com/SWE6813/_git/GamersMeet
-
+Dashboard with Burndown Charts - https://dev.azure.com/SWE6813/GamersMeet/_dashboards/dashboard/04640d66-1824-425b-a294-090d7c00e3fb
 
 
 
