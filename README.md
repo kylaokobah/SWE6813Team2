@@ -9,78 +9,78 @@ Technical Lead for Operations and Development - Kyla Okobah
 Lead for Front-End Development - Jerry Cowell Jr.
 Lead for Back-end Development - Steven Carver
 
+
 Project Metrics:
-Prioritization method to be used to prioritize the entire backlog: https://www.scaledagileframework.com/wsjf/ 
+Ultimately, if prioritization becomes uncertain, WSJF analysis can be done to prioritize selection and implementation order during sprint planning.
+https://www.scaledagileframework.com/wsjf/.  However, for the most part prioritization and work item implementation order will be based on metrics included
+by default in the DevOps templates rather than by using this evaluation technique.  All metrics, dependancies and Product Owner direction will impact the implementation order.
 
 Priorities:
-If the assigned priority confliect with the WSJF calcuation or is not deliverable in a single sprint, the product owner and team will negotiate the work and potentially break the item into smaller work items.
+Priority is the estimation of criticality of the work item to the function of the application.  It is only one factor in evaluating implementation order.
 
-Priority 1 - Critical - Items marked as Critical should ideally be addressed first.
-
-Priority 2 - High - correlates to high business priority in order to deliver on the product vision and objectives.
-
-Priority 3 - Medium - correlates to medium business priority relative to other items.
-
-Priority 4 - Low - correlates to a low business priority relative to other items.
+Priority 1 - Critical - Items Marked Critical must be done for the system to function at all or which present a significant security risk (e.g. allowing a user to select contacts)
+Priority 2 - High - Items marked Critical are components that significantly impact the usability or business value of the application (e.g. allowing a user to specify his enterests)
+Priority 3 - Medium - Items marked Medium are significant extensions to the service or services already offered, encouraging higher engagement of users (e.g. strategically adding
+  another game API)
+Priority 4 - Low - Items marked Low are improvements that will make use of the system easier or more intuitive (e.g. match stack display allowing user to flip through the stack)
 
 Story Points:
+The Story Points will utilize the Fibonacci series to estimate the developer effort necessary to complete a task or user story. (1,2,3,5,8,13,21) Story points and hours are not
+necessarily related, but can be used to estimate the work items that can be completed in a sprint.  Story points take into account grooming time, any knowledge gaps of the participants,
+implementation time, acceptance criteria and verification of success.
 
-    The Story Points will utilize the Fibonacci series. Story points are a relative measure of effort required to deliver the requested work. Story points and hours are not related. The team will select a story to be their baseline story from the backlog, discuss it, story point it, and then go implement it. Once delivered and accepted per the acceptance criteria, that story will be used to compare all over stories as a benchmark when estimating future work. Hopefully the team chooses a story that they think will be of medium effort so that future estimated stories will fall on either side of the baseline story accurately. The baselining exercise can and should be repeated when the team feels that the baseline story is no longer valid.
-https://www.visual-paradigm.com/scrum/what-is-story-point-in-agile/  https://agilevelocity.com/blogget-started-story-points-via-affinity-estimation-cheat-sheet/ 
+Labor Estimates:
+This is where we estimate the number of hours necessary to complete a task.  Labor estimates are at the task level and include the research or investigation time necessary to 
+investigate API interfaces, grooming to prevent impact elsewhere in the program and implemention of the solution.
 
-    Story splitting:
-From time to time, it will be necessary to split a story into smaller chunks in order to deliver the desired business value. Here are a few references to consider when splitting stories:
-https://www.linkedin.com/pulse/10-useful-strategies-breaking-down-large-user-stories-verwijs/  https://techbeacon.com/app-dev-testing/practical-guide-user-story-splitting-agile-teams  https://www.productplan.com/learn/break-product-features-into-user-stories/ 
-
-
-    Item Listing Order:
-
-Items in the backlog will be ranked according to the WSJF calculation used to maitain the backlog priority.
-Acceptance Criteria: The acceptance criteria are written in a spirit of a use case/Gherkin format <Given, When, Then>.
-•	Interface specifications and models, whether programmic or user, will be linked to the item and pointed out in the acceptance criteria.
-•	Specific parameters or descriptions of user interfaces will be included in acceptance criteria.
-•	Testability specification, where definable, should be included with acceptance criteria.
-•	Performance specification, where applicable, should be included in acceptance criteria.
-•	Acceptance criteria should be clear and concise, giving consideration to how it can be misinterpreted and clarifying
-
-    Definition of Ready (DoR):
-
-The term PBI is used to identify any backlog item requiring elaboration; user story or bug.
-
-The team's definition of ready will align with the INVEST model:
-
-I Independent The PBI (Product Backlog Itmem; story or bug) should be self-contained, in a way that there is no inherent dependency on another PBI. You also try to avoid dependencies with others outside the Scrum Team Dependencies are identified and no external dependencies block the User Story from being completed.
-
-N Negotiable PBIs are not explicit contracts and should leave space for discussion. This leads to a discussion between the Development Team and the Product Owner about the exact delivery. So no set of requirements is carved in stone.
-
-V Valuable A PBI must deliver value to the stakeholders. This looks like stating the obvious, however, it is possible that a user story that has been written down at an earlier stage is outdated and no longer represents any value when it is discussed. Business value is clearly articulated in the description; As a <type of user>, I want <some goal or objective >, so that <benefit, value> PO recognizes and approves the business need of the story
-
-E Estimable You must always be able to estimate the size of a PBI. The Development Team needs sufficient information about the stakeholder's wishes to estimate how much effort it will take to realize this. Often the estimate is made by means of relative estimates, for example with Planning Poker. High-level Technical Approach Document (TAD) is attached/linked. Process models (context diagram, functional flow diagram, cross-functional diagram and/or flowchart diagram) are attached/linked. Metrics and Analytics requirements are articulated (i.e data layer story is identified and linked or performance parameters are defined). Global Requirements have been reviewed and checked for relevance
-
-S Small PBIs should not be so big as to become impossible to plan/task/prioritize with a certain level of accuracy. The User Story must be small enough to be delivered within a Sprint. After all, an incremental part of the project must be delivered at the end of every Sprint. User Stories for which the Development Team estimates that the delivery will take longer than a Sprint must therefore be clipped by the Product Owner.
-
-T Testable The PBI or its related description must provide the necessary information to make test development possible. The completed work must be finished and can in principle be delivered to the customers. This means that it must be tested whether everything has been delivered properly. In order to test, it is important that clear acceptance criteria are written that the delivered work must meet in order to be valuable to the Stakeholders
+Risks:
+This is an an assessment of any identified risks.  These may include disruption of service, failure to complete the work, or the cost of failed security.  The risks and explanation
+of the assessment are noted in User Story discussion.  Risks are low-medium-high.
 
 
-    DoR Checklist:
-•	Target release has been set
-•	Story is linked to a higher level epic
-•	Initial business priority has been set
-•	Title is clear and understandable
-•	User story is written in the "As a <type of user>, I want <some goal or objective >, so that <benefit, value>" format
-•	Acceptance criteria are clear and written in the "<Given, When, Then>" format
-•	Story points estimated by the team
-    
-    Definition of Done (DoD) Checklist:
-•	Development is completed and validated against the acceptance criteria
-•	Development looks like, and is validated against the approved designs. Development looks like and is validated against the approved designs (end user POV) in the design tool (Figma??)
-•	Development is compliant with performance KPIs
-•	Template/Component is fully responsive on both desktop and mobile based on designs.
-•	Realistic data/content has been used for development
-•	Unit and UI tests have been performed and have passed
-•	If applicable, user documentation has been created/updated for this story
-•	Verify solution against solution specification, architecture guidelines, coding standards, and principles.
-•	Realistic data/content has been used in testing
-•	User story has been tested and validated against acceptance criteria and test cases created for the story at the beginning of the sprint
-•	User story has been tested and validated against page designs
+Procedures:
+
+Scrum:
+This team will operate within the Scrum framework.  As such, work will be scheduled in sprints and planned in sprint planning meetings.  Each sprint will be followed by a sprint review
+to celebrate our successes and a sprint retrospective to solidify and implement process changes that help the team function more effectively.  The team will also hold standup
+meetings 3 times a week, which is comparable to a working environment where standup meetings are heald every day for full-time employees.
+
+Sprint Planning:
+At the sprint planning meeting planners will make a commitment to achieve selected User Stories at the User Story level.  The review will include assessment, grooming and full
+definition of all user stories implemented that sprint.  This will include a full definition of the acceptance criteria and any tasks that appropriately decompose that stories.  If
+a User Story will only be partially completed during a sprint, it will be split into two user stories, preferably resulting in a functional improvement implemented at the end of the
+sprint under consideration.
+
+Combing Item Listing Order:
+Items in the backlog will be ranked manually by the Product Owner in coordination with the Scrum Master and development team.  The order will take into account any approriate metrics, 
+dependancies and Product Owner preferences.
+
+Assignment:
+Work Items, whether User Story or Task are self-assigned per the Scrum Framework.  Each team member is expected to select a set up up to 5 User Stories that he will actively implement.
+Before accepting more assignments, the team member must de-assign or complete one of his user stories.  A review of assignements, accomplishment toward them, plans and impediments
+are the agenda of every standup meeting.  Each team member is expected to be able to hold his own in that meeting, which he does by self-assigning User Stories that he wants to
+implement.
+
+Story splitting:
+In the event that a user story has not been successfully completed, or is initially not expected to be completed within one sprint, the team will implement this procedure to split
+the User Story into two stories, thus maintaining sprint integrity, contribution tracking and task assignment.
+https://www.middleway.eu/dealing-with-uncompleted-tasks-end-sprint-azure-devops/ 
+
+
+Resources:
+
+MS Teams for chat, video, file, and link sharing.  We have 4 channels whose names are self-explanatory.:
+https://teams.microsoft.com/l/team/19%3amI81jv1uTuhX4KYXONYhFvItWq_hyR6FDGcmXOsEP641%40thread.tacv2/conversations?groupId=4a7d32a3-2fd4-42c5-afa9-aff4c2d8f783&tenantId=45f26ee5-f134-439e-bc93-e6c7e33d61c2
+
+
+Azure Devops for Project and Sprint Management.  Team 2 stores its Kanban (US level) and Sprint (Task level) boards as well as the project backlog in DevOps Boards.  It is configured
+as an “Agile” project which allows elements from both Scrum and Kanban frameworks.  The project also includes a dashboard and repository, which will be included below as separate
+links:
+Board – https://dev.azure.com/SWE6813/GamersMeet/_boards/board/t/GamersMeet%20Team/Stories
+Project Backlog – https://dev.azure.com/SWE6813/GamersMeet/_backlogs/backlog/GamersMeet%20Team/Stories/?showParents=true
+Sprint – https://dev.azure.com/SWE6813/GamersMeet/_sprints/taskboard/GamersMeet%20Team/GamersMeet/Sprint%201
+Repository – https://dev.azure.com/SWE6813/_git/GamersMeet
+
+
+
 
