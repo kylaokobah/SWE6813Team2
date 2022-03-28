@@ -28,10 +28,7 @@ const NavBar = () => {
             <MenuItem><Link href="/register" underline="none" color="inherit">Register</Link></MenuItem>
             <MenuItem>
               <Link href="/login" underline="none" color="inherit">Login</Link>
-              { <ListItemIcon>
-                <Logout fontSize="small" />
-              </ListItemIcon>
-              Logout }
+
             </MenuItem>
           </MenuList>
         </Container>
