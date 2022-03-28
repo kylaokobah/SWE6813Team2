@@ -39,7 +39,7 @@ const LoginPage = () => {
         email,
         password,
       );
-      navigate("/");
+      navigate("/dashboard");
       // console.log(user);
       alert((userLogin, 'Login is Successful!!'));
     } catch (error) {
@@ -80,7 +80,7 @@ const LoginPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className={css.loginForm}>
+      <Box className={css.loginForm} maxWidth="sm" component={Paper} elevation={3}>
         <Container maxWidth="xs">
           <Typography variant="h2">Sign in with a Gamers Meet Account</Typography>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -249,6 +249,7 @@ const theme = createTheme({
 const Styles = makeStyles({
   loginForm: {
     padding: '30px 0',
+    margin: '30px auto',
   },
 });
 

@@ -35,14 +35,15 @@ app.post('/', function(req,res){
 import React from "react";
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router";
-import { useUserAuth } from "../../AuthMethods/AuthMethods.js";
+import { signOut, getAuth } from 'firebase/auth';
+//import { useUserAuth } from "../../AuthMethods/AuthMethods.js";
 
 const DashboardPage = () => {
-  const { logOut, user } = useUserAuth();
+  const auth= getAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      await logOut();
+      await signOut();
       navigate("/");
     } catch (error) {
       console.log(error.message);
