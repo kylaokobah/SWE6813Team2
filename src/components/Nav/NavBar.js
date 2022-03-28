@@ -4,7 +4,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { AppBar, Toolbar } from '@mui/material';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { MenuList, MenuItem, Link } from '@mui/material';
+import { MenuList, MenuItem, Link, ListItemIcon } from '@mui/material';
+
 
 
 
@@ -27,10 +28,7 @@ const NavBar = () => {
             <MenuItem><Link href="/register" underline="none" color="inherit">Register</Link></MenuItem>
             <MenuItem>
               <Link href="/login" underline="none" color="inherit">Login</Link>
-              {/* <ListItemIcon>
-                <Logout fontSize="small" />
-              </ListItemIcon>
-              Logout */}
+
             </MenuItem>
           </MenuList>
         </Container>

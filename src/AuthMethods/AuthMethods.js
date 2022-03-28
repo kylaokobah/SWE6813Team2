@@ -1,102 +1,67 @@
-/*import { createContext, useContext, useEffect, useState } from "react";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
-import { auth } from "../database/firebase.js";
+import React, { useState, useEffect, useContext, createContext } from "react";
+import * as firebase from "firebase/app";
+import "firebase/auth";
 
-const userAuthContext = createContext();
-
-//PSN Access token
-const myNpsso= "M7heKQ4wq9KPT7qbiZk7XUS45TlB9FWS6B56X5ihFv8jZ8vf3JhsaknremoTCHJS";
-// We'll exchange your NPSSO for a special access code.
-const accessCode = await exchangeNpssoForCode(npsso);
-// We can use the access code to get your access token and refresh token.
-const authorization = await exchangeCodeForAccessToken(accessCode);
-
-export function UserAuthContextProvider({ children }) {
-  const [user, setUser] = useState({});
-
-  function logIn(email, password) {
-    return signInWithEmailAndPassword(auth, email, password);
-  }
-  function signUp(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password);
-  }
-  function logOut() {
-    return signOut(auth);
-  }
-  function googleSignIn() {
-    const googleAuthProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleAuthProvider);
-  }
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-      console.log("Auth", currentuser);
-      setUser(currentuser);
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
-  return (
-    <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, googleSignIn }}
-    >
-      {children}
-    </userAuthContext.Provider>
-  );
+export function setToken (token) {
+  window.localStorage.setItem('token', token)
 }
 
-export function useUserAuth() {
-  return useContext(userAuthContext);
+export function getToken() {
+  return window.localStorage.getItem('token')
 }
 
-export const emailLogin = ( email, password ) => {
+export function removeToken() {
+  window.localStorage.removeItem('token')
+}
 
-    return ( dispatch ) => {
+function getPayload() {
+  const token = getToken()
+  if (!token) return false
+  const parts = token.split('.')
+  if (parts.length < 3) return false
+  return JSON.parse(atob(parts[1]))
+}
 
-        dispatch( loginStart() );
+export function isAuthenticated() {
+  const payload = getPayload()
+  if (!payload) return false
+  const now = Math.round(Date.now() / 1000)
+  return now < payload.exp
+}
 
-        firebase.auth().signInWithEmailAndPassword( email, password )
-        .then( ({ user }) => {
-            dispatch( login( user.uid, user.displayName ) );
-            dispatch( loginFinish() );
-        })
-        .catch( console.warn, dispatch( loginFinish() )  )
-    };
+export function isOwner(userId) {
+  const payload = getPayload()
+  if (!payload) return false
+  return userId === payload.sub
+}
+
+const authContext = createContext();
+// Provider component that wraps your app and makes auth object ...
+// ... available to any child component that calls useAuth().
+export function ProvideAuth({ children }) {
+  const auth = useProvideAuth();
+  return <authContext.Provider value={auth}>{children}</authContext.Provider>;
+}
+// Hook for child components to get the auth object ...
+// ... and re-render when it changes.
+export const useAuth = () => {
+  return useContext(authContext);
 };
+// Provider hook that creates auth object and handles state
+function useProvideAuth() {
+  const [user, setUser] = useState(null);
 
-
-export const registerUser = ( email, password, name ) => {
-
-    return ( dispatch ) => {
-        firebase.auth().createUserWithEmailAndPassword( email, password )
-        .then( async({ user }) => {
-
-            await user.updateProfile( { displayName: name } );
-
-            dispatch(
-                login( user.uid, user.displayName )
-            );
-        })
-        .catch( console.warn )
+   const signout = () => {
+      return firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          setUser(false);
+        });
     };
-}
 
-export const login = ( uid, displayName) => ({
-
-    type: authTypes.login,
-    payload: {
-        uid,
-        displayName
+    // Return the user object and auth methods
+      return {
+        signout,
+      };
     }
-
-});*/
