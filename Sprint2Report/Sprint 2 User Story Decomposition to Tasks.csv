@@ -1,0 +1,60 @@
+﻿ID,Work Item Type,Title 1,Title 2,Title 3,Assigned To,State,Iteration Path
+35,Task,Humanize other players,,,,New,GamersMeet\Sprint 2 - Matching and UI
+37,User Story,Automatic Matching Algorithm,,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+28,Task,,Match on more than skill alone,,,New,GamersMeet\Sprint 2 - Matching and UI
+123,Test Case,,,Matching players with self-identified characteristics,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+32,Task,,Players Matched by Skill Level ,,,New,GamersMeet\Sprint 2 - Matching and UI
+122,Test Case,,,Assess gamer’s knowledge and experience,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+112,Task,,Create a list of potential matches using both skill and self-identified characteristics,,,New,GamersMeet\Sprint 2 - Matching and UI
+41,Task,Create UI to Enter Self-identified Profile Characteristics,,,,New,GamersMeet\Sprint 2 - Matching and UI
+61,User Story,Display Summary Profile of Gamers from API,,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+42,Task,,Create a User Friendly Container for Managing Summary Gamer Profiles,,,New,GamersMeet\Sprint 2 - Matching and UI
+74,Task,,Plan out details of Summary Matched Gamer Display with Navigation,,,New,GamersMeet\Sprint 2 - Matching and UI
+75,Task,,Front End coding for Summary Profile,,,New,GamersMeet\Sprint 2 - Matching and UI
+78,Task,,Backend Coding for Summary Matched Gamer Profile,,,New,GamersMeet\Sprint 2 - Matching and UI
+69,User Story,Design UI Spr2,,,Frank Wear <fwear@students.kennesaw.edu>,Resolved,GamersMeet\Sprint 2 - Matching and UI
+67,Task,,Flowchart Expected User Interaction,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+130,Test Case,,Viewing a gamer’s profile,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+70,User Story,Establish a Link to the Google Firebase API,,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Resolved,GamersMeet\Sprint 2 - Matching and UI
+109,Task,,Establish and verify Connection,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+110,Task,,Code to Query and Push Data,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+126,Test Case,,,Saving API Info to Database,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+127,Test Case,,,Accessing historical information about games,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+113,Task,,Create User Management API for Firebase,,Kyla Okobah <kokobah2@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+132,Test Case,,Validate Firebase get functionality,,Frank Wear <fwear@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+71,User Story,Build out a database structure,,,Frank Wear <fwear@students.kennesaw.edu>,Resolved,GamersMeet\Sprint 2 - Matching and UI
+72,Task,,Build out Table Structure for downloaded user profiles,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+73,Task,,Build out Table structure for matches between users,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+88,Task,,Build out table structure for storing User Profiles,,,Closed,GamersMeet\Sprint 2 - Matching and UI
+108,Task,,Create and upload dummy data into DB,,,Closed,GamersMeet\Sprint 2 - Matching and UI
+81,Task,Plan UI for Creating User Profile,,,Frank Wear <fwear@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+83,Task,Front end Coding for Creating New User Profile,,,,New,GamersMeet\Sprint 2 - Matching and UI
+84,Task,Backend Coding for Creating User Profile,,,,New,GamersMeet\Sprint 2 - Matching and UI
+85,User Story,Create User Login Page with Option to Create new account,,,Steven Carver <scarver6@students.kennesaw.edu>,Resolved,GamersMeet\Sprint 2 - Matching and UI
+49,User Story,,Password Reset,,,New,GamersMeet
+50,Task,,Account Profile,,,New,GamersMeet\Sprint 2 - Matching and UI
+86,Task,,Backend Coding to Create New Account,,,New,GamersMeet\Sprint 2 - Matching and UI
+116,Test Case,,User can create gamer account ,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+90,User Story,Sprint 2 Planning,,,Frank Wear <fwear@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+91,Task,,Grooming User Stories and Ordering - Sprint 2,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+92,Task,,Plan Sprint 2 Goal and Scope,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+93,Task,,Decompose Stories into Tasks,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+94,Task,,Define Acceptance Criteria for User Stories,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+99,Task,,Set up Story Points for Sprint 2,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+100,Task,,Create Burndown Chart for Sprint 2,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+101,Task,,Define Tests for all Work Items as appropriate,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+102,Task,,Sprint 1 Review and Retrospective,,Frank Wear <fwear@students.kennesaw.edu>,Closed,GamersMeet\Sprint 2 - Matching and UI
+111,Task,,Sprint 2 Review and Retrospective,,Frank Wear <fwear@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+95,User Story,Improve knowledge gaps for team - Sprint 2,,,Frank Wear <fwear@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+96,Task,,Mob Coding in Javascript,,Jerry Cowell Jr <jcowellj@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+97,Task,,Assign 2-3 manual DB tasks to each member to build familiarity,,Frank Wear <fwear@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+98,Task,,Have each team member assist with at least 1 API Integration,,Frank Wear <fwear@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+103,User Story,Set up Repo Operations,,,,New,GamersMeet\Sprint 2 - Matching and UI
+104,Task,,CI Integration,,,New,GamersMeet\Sprint 2 - Matching and UI
+105,Task,,CD Integration,,,New,GamersMeet\Sprint 2 - Matching and UI
+106,Task,,Develop Pull Review Policy and Settings,,Frank Wear <fwear@students.kennesaw.edu>,New,GamersMeet\Sprint 2 - Matching and UI
+107,User Story,Get multiple users from API,,,Steven Carver <scarver6@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI
+89,Task,,Set up team account to retrieve more than one match,,,New,GamersMeet\Sprint 2 - Matching and UI
+119,Test Case,,Viewing historical information about games played by another member.,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet
+115,Test Case,Selecting/viewing users of the application ,,,Takyi Obeng <tobeng1@students.kennesaw.edu>,Design,GamersMeet\Sprint 2 - Matching and UI
+133,Shared Steps,"Navigate to ""View Users"" page",,,Frank Wear <fwear@students.kennesaw.edu>,Active,GamersMeet\Sprint 2 - Matching and UI

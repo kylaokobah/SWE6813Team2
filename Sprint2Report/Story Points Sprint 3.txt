@@ -1,0 +1,3 @@
+In Sprint 3, I believe we will be able to complete about 12 story points.  My reasoning is that on sprint 2 we learned that we only have one active developer and
+that developing additional user stories, testing, tasks and documentation pulled resources from direct labor efforts.  A one person production team does not need 2 people managing her actions.  As of this writing, we completed 6 story points of the 30 planned, and expect to complete 5 more before the end of the sprint.  Of those 11 story points, 5 were planning, 3 were design actions, and 3 were development.  Clearly this weighting is ineffective.  Reducing the number of story points attempted will most likely result in more story points completed.
+
