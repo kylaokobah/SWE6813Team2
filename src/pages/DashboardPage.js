@@ -27,34 +27,41 @@ app.post('/', function(req,res){
         }}
         , function(error, response,body) {
             console.log(body);
-            res.json(body);        
+            res.json(body);
     });
 });
+*/
 
-//middlewares
-//app.use(express.json());
+import React from "react";
+import Button from '@mui/material/Button';
+import { useNavigate } from "react-router";
+import { signOut, getAuth } from 'firebase/auth';
+//import { useUserAuth } from "../../AuthMethods/AuthMethods.js";
 
-// dev logging
-///if(ProcessingInstruction.env.NODE_ENV === 'development'){
- //   app.use(morgan('dev'));
-//}
+const DashboardPage = () => {
+  const auth= getAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await signOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+  return (
+    <>
+      <div className="p-4 box mt-3 text-center">
+        Hello Welcome <br />
 
-const port = process.env.PORT || 5000;
+      </div>
+      <div className="d-grid gap-2">
+        <Button variant="primary" onClick={handleLogout}>
+          Log out
+        </Button>
+      </div>
+    </>
+  );
+};
 
-app.listen(port);*/
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './App';
-//import reportWebVitals from './reportWebVitals';
-import {BrowserRouter } from 'react-router-dom';
-
-
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export default DashboardPage;

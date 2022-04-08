@@ -11,18 +11,20 @@ import { MenuList, MenuItem, Link, ListItemIcon } from '@mui/material';
 
 
 
+
 const NavBar = () => {
 
 
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography variant="h1"> ADD OUR GM LOGO HERE</Typography>
             <MenuList>
-              <MenuItem><Link href="/" underline="none" color="inherit">Home</Link></MenuItem>
+              <MenuItem><Link href="/" underline="none" color="inherit">Home</Link>
+              </MenuItem>
             </MenuList>
+
           </Toolbar>
           <MenuList>
             <MenuItem><Link href="/register" underline="none" color="inherit">Register</Link></MenuItem>
@@ -51,6 +53,9 @@ const theme = createTheme({
           flexWrap: 'wrap',
           justifyContent: 'space-between',
         },
+        backgroundColor: "black",
+
+
       },
     },
     MuiToolbar: {

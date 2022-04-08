@@ -1,0 +1,62 @@
+body{
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+blockquote {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*h1{
+  font-family: Play;
+  font-size: 70px;
+  color:rgba(220, 223, 228);
+}
+
+hr {
+   margin-left: 20%;
+   margin-right: 20%;
+   background-color: rgba(220, 223, 228);
+
+}
+
+.progress {
+  border-radius: 0;
+  background-color: transparent;
+  height: 2px;
+}
+
+.progress-bar {
+  background-color: rgba(3, 57, 145);
+}
+
+
+.cabecera{
+  background-color: rgba(32, 33, 37, 0.8);
+}
+
+.container{
+  padding: 0;
+  background-color: rgba(32, 33, 37, 0.5);
+  border-radius: 20px;
+  box-shadow: 0px 3px 1px  rgba(3, 57, 145);
+}
+
+.contenedorCards {
+  justify-content: center;
+  flex-wrap:wrap;
+  padding: 60px;
+}
+
+.loading {
+  color: rgba(3, 57, 145)
+}
+
+.nav{
+    display: flex;
+    height: 60px; width: 100%;
+    background-color: black;
+}*/

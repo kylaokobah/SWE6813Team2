@@ -4,7 +4,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="login, landingpage, googlesignin, signup functionalities are working&#10;working on:&#10;1. checks to see if &quot;signinwithgoogle&quot; email exists in database then &#10;2. route &quot;signinwithgoogle&quot; users to enter additional information&#10;3. Adding new user registration info to &quot;user collection&quot; in database&#10;4. Saving all information entered into user's profile&#10;5. Query a list of existing users in database to display on &quot;find a match&quot; page" />
+    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="login, landingpage, googlesignin, signup functionalities are working&#10;working on:&#10;1. checks to see if &quot;signinwithgoogle&quot; email exists in database then &#10;2. route &quot;signinwithgoogle&quot; users to enter additional information&#10;3. Adding new user registration info to &quot;user collection&quot; in database&#10;4. Saving all information entered into user's profile&#10;5. Query a list of existing users in database to display on &quot;find a match&quot; page">
+      <change afterPath="$PROJECT_DIR$/src/Redux/Store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/actions/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/actions/websocketActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/export.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/GAMERSMEET.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/articles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/back-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/commandes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/controler.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/counter-strike-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/csgo-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/csgo-police.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/e-coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/esport-background-frame1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fb-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fifa20-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fifa20-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fifa20-zizou.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/forest-cropped.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/forest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fortnite-char.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fortnite-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/fortnite-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/gamer-mouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/gift.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/history-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/history-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-excite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lol-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lol-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lol-potion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/lol-riven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/mastercard-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/mystique-statue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/one.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/panier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/paypal-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/rocket-crash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/rocket-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/rocket-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/separator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/solo-avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/steam-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/stripe-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/team-avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/teemo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/three.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/twitter-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/two.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/visa-logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/videos/esport-background.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/LoggedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/NormalRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/Routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/UnloggedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/AuthProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/LandingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/LoginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MatchHistoryPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ProfilePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/RegisterPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/findMatchPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/NotFound.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/landing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/register.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/GAMERSMEET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/GMLogo.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthMethods/AuthMethods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/EditUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DashboardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/LandingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/LoginPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/RegisterPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/WelcomePage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +150,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
