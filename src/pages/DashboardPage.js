@@ -32,36 +32,12 @@ app.post('/', function(req,res){
 });
 */
 
-import React from "react";
-import Button from '@mui/material/Button';
-import { useNavigate } from "react-router";
-import { signOut, getAuth } from 'firebase/auth';
-//import { useUserAuth } from "../../AuthMethods/AuthMethods.js";
+import '../styles/Dashboard.css'
 
-const DashboardPage = () => {
-  const auth= getAuth();
-  const navigate = useNavigate();
-  const handleLogout = async () => {
-    try {
-      await signOut();
-      navigate("/");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-  return (
-    <>
-      <div className="p-4 box mt-3 text-center">
-        Hello Welcome <br />
-
-      </div>
-      <div className="d-grid gap-2">
-        <Button variant="primary" onClick={handleLogout}>
-          Log out
-        </Button>
-      </div>
-    </>
-  );
-};
-
-export default DashboardPage;
+export default function DashboardPage() {
+    return (
+        <div>
+            Dashboard
+        </div>
+    )
+}

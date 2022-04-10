@@ -1,4 +1,3 @@
-//import { makeStyles } from '@mui/styles';
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Box, Container, Paper } from '@mui/material';
@@ -15,12 +14,13 @@ import {
 import RegisterPage from './RegisterPage'
 import { useHistory } from "react-router-dom";
 
-   export default class LandingPage extends Component {
 
+   export default class LandingPage extends Component {
        render() {
            return (
                <div className="LandingPage">
-                   <Helmet><title>{this.props.title}</title></Helmet>
+                <Helmet><title>{this.props.title}</title></Helmet>
+
                    <div className="home-1">
                        <video id="videoBG" poster={frame1BG} playbackrate="0.75" autoPlay playsInline muted loop>
                            <source src={esportBG} type="video/mp4"></source>
@@ -30,7 +30,8 @@ import { useHistory } from "react-router-dom";
 
                                    <button
                                    className="e-button"
-                                   onClick={() => this.history.push('/Register')}
+                                   onClick={() => this.history.push('/register')}
+
                                    > Find a Match
                                    </button>
 
@@ -45,4 +46,5 @@ import { useHistory } from "react-router-dom";
                          </div>
                                );
                            }
+
                        }

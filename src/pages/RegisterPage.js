@@ -1,103 +1,91 @@
-import { Button, Container, Grid, TextField, Typography, CircularProgress, Alert } from '@mui/material';
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-//import useUserAuthActions from '../Redux/actions/Auth.js';
-import GAMERSMEET from "../assets/images/GAMERSMEET.png";
-import useAuth from '../hooks/useAuth';
+import {  useContext, useRef, useState } from 'react'
+import { useSignup } from '../hooks/useSignup'
+import {useFortniteContext} from '../hooks/useFortnite'
+import '../styles/signup.css'
 
 
+export default function RegisterPage() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [epicName, setEpicName] = useState('')
+    const [thumbnail, setThumbnail] = useState(null)
+    const [thumbnailError, setThumbnailError] = useState('')
+    const { signup, isPending, error } = useSignup()
 
-const RegisterPage = () => {
-    const [newUserData, setnewUserData] = useState({})
-    const { handleRegister, isLoading, user, authError } = useAuth();
+    //add user image
+    const handleFileChange = (e) => {
+            setThumbnail(null)
+            let selected = e.target.files[0]
+            console.log(selected)
 
+            if (!selected) {
+                setThumbnailError('please select a file')
+                return
+            }
+            if (!selected.type.includes('image')) {
+                setThumbnailError('selected file must be an image')
+                return
+            }
+            if (selected.size > 100000) {
+                setThumbnailError('image file must be less than 100kb')
+                return
+            }
 
+            setThumbnailError(null)
 
-    const handleOnBlur = e => {
-        e.preventDefault();
-        const field = e.target.name;
-        const value = e.target.value;
-        const createLoginData = { ...newUserData }
-        console.log(createLoginData);
-        createLoginData[field] = value;
-        setnewUserData(createLoginData)
-    }
-    const handleCreatePassword = e => {
-        if (newUserData.password !== newUserData.password2) {
-            alert('Your password did not match')
-            return
+            setThumbnail(selected)
+            console.log('thumbnail updated')
         }
-       handleRegister(newUserData.email,newUserData.password, newUserData.name)
-        e.preventDefault()
-    }
 
- return (
-         <Container>
-             <Grid container spacing={3}>
-                 <Grid item xs={12} md={6} sx={{ mt: 8 }}>
-                     <Typography variant="body1" gutterBottom>Register</Typography>
+   const handleSubmit = (e) => {
+          e.preventDefault()
+          signup(email, password, epicName, thumbnail)
+      }
 
-                     {!isLoading &&
-                         <form onSubmit={handleCreatePassword}>
+    return (
 
-                             <TextField
-                                 sx={{ width: '75%', mt: 3, m: 1 }}
-                                 name="email"
-                                 onBlur={handleOnBlur}
-                                 id="email"
-                                 label="Your Email"
-                                 type="email"
-                                 variant="standard" />
-                             <TextField
-                                 sx={{ width: '75%', m: 1 }}
-                                 name="password"
-                                 onBlur={handleOnBlur}
-                                 id="password"
-                                 label="Your Password"
-                                 type="password"
-                                 variant="standard" />
-                             <TextField
-                                 sx={{ width: '75%', m: 1 }}
-                                 name="password2"
-                                 onBlur={handleOnBlur}
-                                 id="standard-basic"
-                                 label="Confirm your Password"
-                                 type="password"
-                                 variant="standard" />
+        <form className='auth-form' onSubmit={handleSubmit}>
+            <h2>signup</h2>
+            <label>
+                <span>email:</span>
+                <input
+                    required
+                    type='email'
+                    onChange={e => setEmail(e.target.value)}
+                    value={email}
+                />
+            </label>
+            <label>
+                <span>password:</span>
+                <input
+                    required
+                    type='password'
+                    onChange={e => setPassword(e.target.value)}
+                    value={password}
+                />
+            </label>
+            <label>
+                <span>Epic name:</span>
+                <input
+                    required
+                    type='text'
+                    onChange={e => setEpicName(e.target.value)}
+                    value={epicName}
+                />
+            </label>
+            <label>
+                <span>profile thumbnail:</span>
+                <input
+                    required
+                    type='file'
+                    onChange={handleFileChange}
+                />
+                {thumbnailError && <div className='error'>{thumbnailError}</div>}
+            </label>
+            {!isPending && <button className='btn'>sign up</button>}
+            {isPending && <button className='btn' disabled>loading</button>}
+            {error && <div className='error'>{error}</div>}
+        </form>
 
-                             <TextField
-                                       sx= {{ width: '75%', m: 1 }}
-                                       name="Epic username"
-                                       onBlur={handleOnBlur}
-                                       id="epicName"
-                                       label="Enter your Epic Username"
-                                       type="username"
-                                       variant="standard" />
-
-                             <br />
-                             <Button
-                                 variant="contained"
-                                 sx={{ width: '75%', m: 1, mt: 2 }}
-                                 type="submit"
-                             >Register</Button>
-                             <br />
-                             <NavLink style={{ textDecoration: 'none' }} to="/login">
-                                 <Button variant="text">Already Registered? Please Login</Button>
-                             </NavLink>
-                         </form>}
-                     {isLoading && <CircularProgress />}
-                     {user.email &&
-                         <Alert severity="success">
-                             Registration success
-                         </Alert>}
-                     {authError && <Alert severity="error">{authError}</Alert>}
-                 </Grid>
-                 <Grid item xs={12} md={6}>
-                     <img style={{ width: '100%' }} src={GAMERSMEET} alt='' />
-                 </Grid>
-             </Grid>
-         </Container>
-     );
- };
-
-export default RegisterPage;
+    )
+}

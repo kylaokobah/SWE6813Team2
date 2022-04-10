@@ -5,6 +5,7 @@ import { getStorage } from "@firebase/storage";
 import firebase from 'firebase/compat/app';
 
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyB5cogAS8f75cXicpobVAgexhXhGAYYPwk",
   authDomain: "gamers-meet-293c1.firebaseapp.com",
@@ -23,6 +24,9 @@ const firestoreDb = getFirestore(app);
 const authDb = getAuth(app);
 // Storage
 const storageDb = getStorage(app);
+
+// timestamp
+//const timestamp = firebase.firestore.Timestamp
 
 // Provider
 const googleProvider = new GoogleAuthProvider();
