@@ -6,31 +6,34 @@ import NavBar from "../components/Nav/NavBar.js";
 import { NavLink } from 'react-router-dom';
 import "../styles/landing.css";
 import {
-    frame1BG,
     esportBG,
+    frame1BG,
     fortniteImage,
     separator,
 } from "../assets/export.js";
 import RegisterPage from './RegisterPage'
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-   export default class LandingPage extends Component {
-       render() {
+
+const LandingPage = (props) => {
+const navigate= useNavigate();
+   //export default class LandingPage extends Component {
+       //render() {
            return (
                <div className="LandingPage">
-                <Helmet><title>{this.props.title}</title></Helmet>
+                //<Helmet><title>{this.props.title}</title></Helmet>
 
-                   <div className="home-1">
+                  /* <div className="home-1">
                        <video id="videoBG" poster={frame1BG} playbackrate="0.75" autoPlay playsInline muted loop>
-                           <source src={esportBG} type="video/mp4"></source>
+                           <source src={esportBG} widtype="video/mp4"></source>
                        </video>
-                        <div>
+                        <div>*/
                                   <p>Find Your Gaming Partner Today</p>
 
                                    <button
                                    className="e-button"
-                                   onClick={() => this.history.push('/register')}
+                                   onClick={() => navigate ('/register')}
 
                                    > Find a Match
                                    </button>
@@ -38,13 +41,14 @@ import { useHistory } from "react-router-dom";
                                    </div>
                                    </div>
 
-                            <div className="svg-wrapper">
+                           /* <div className="svg-wrapper">
                                   <svg viewBox="0 0 500 150" preserveAspectRatio="none">
                                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
                                      </svg>
-                                      </div>
+                                     </div>*/
                          </div>
                                );
                            }
 
-                       }
+
+export default LandingPage;

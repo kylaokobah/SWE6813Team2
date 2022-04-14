@@ -5,12 +5,12 @@
 .home-1 {
     display: flex; align-items: center; justify-content: center;
     height: 700px;
-    overflow: hidden;
+
     position: relative;
     cursor: pointer;
 }
 #videoBG {
-    height: 133%;
+    height: 433%;
     flex-shrink: 0;
     opacity: 0.2;
 }

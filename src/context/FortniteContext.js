@@ -1,4 +1,4 @@
- import React, { useEffect, useState, createContext } from "react";
+ /*import React, { useEffect, useState, createContext } from "react";
  import GetFortniteValues from '../api/GetFortniteValues';
 
 export const FortniteContext = createContext()
@@ -122,4 +122,4 @@ export const FortniteContext = createContext()
                  {{...props} }
                </FortniteContext.Provider>
              )
-             }
+             }*/

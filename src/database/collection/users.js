@@ -23,6 +23,71 @@ export const getAllUsers = async () => {
 
   return allUsers
 }
+//need to write methods for assigning users random accountIDs//
+export const getIdByUserID = async (id) => {
+  let idu
+  const userRef = collection(firestoreDb, 'user')
+  const q = query(userRef, where('accountID', '==', id))
+
+  const querySnapshot = await getDocs(q)
+
+  querySnapshot.forEach((doc) => {
+    accountID = doc.id
+  })
+
+  return accountID
+
+}
+
+
+export const userAlreadyExists = async (epicName) => {
+ let userExist
+  const usersRef = collection(firestoreDb, 'user')
+  const q = query(usersRef, where('epicName', '==', username))
+
+  const querySnapshot = await getDocs(q)
+  querySnapshot.forEach((doc) => {
+    userExist = doc.data()
+  })
+
+  return userExist?.epicName
+
+}
+
+
+export const getUserByEmail = async (email) => {
+  let user
+  const usersRef = collection(firestoreDb, 'user')
+  const q = query(usersRef, where('email', '==', email))
+
+  const querySnapshot = await getDocs(q)
+  querySnapshot.forEach((doc) => {
+    user = doc.data()
+  })
+
+  return user
+}
+
+export const getUserepicName= async (epicName) => {
+  let user
+  const usersRef = collection(firestoreDb, 'user')
+  const q = query(usersRef, where('epicName', '==', epicName))
+
+  const querySnapshot = await getDocs(q)
+  querySnapshot.forEach((doc) => {
+    user = doc.data()
+  })
+
+  return user
+}
+
+
+/*export const getLoggedInUser =async (displayName, email, epicName, photoURL, platform) => {
+let user
+const usersRef = collection(firestoreDb, 'user')
+const q = query(usersRef, where('email', '==', email))
+
+}*/
 
 
 

@@ -29,7 +29,8 @@ const MatchHistoryPage = () => {
     setLoading(true);
   }
   return (
-    <div className="h-screen overflow-y-scroll bg-black text-white overflow-hidden">
+    //<div className="h-screen overflow-y-scroll bg-black text-white overflow-hidden">
+    <div>
       <NavBar />
 
       <div className="flex justify-center items-center flex-col space-y-7">

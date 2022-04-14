@@ -1,10 +1,10 @@
 //Videos
-export { default as esportBG } from "./videos/esport-background.mp4";
+export { default as esportBG } from "./videos/esportBG.mp4";
 //Images
+export { default as frame1BG } from "./images/frame1BG.png";
 export { default as generalBG } from "./images/mystique-statue.jpg";
 export { default as fortniteLogo } from "./images/fortnite-logo.png";
 export { default as forestBG } from "./images/forest.jpg";
-export { default as frame1BG } from "./images/esport-background-frame1.png";
 export { default as oneIcon } from "./images/one.png";
 export { default as twoIcon } from "./images/two.png";
 export { default as threeIcon } from "./images/three.png";
