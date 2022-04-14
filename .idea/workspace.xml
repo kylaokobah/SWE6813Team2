@@ -4,86 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="Updates">
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/Counter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/FetchData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/NavMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/components/NavMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/registerServiceWorker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/store/Counter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/store/WeatherForecasts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/store/configureStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/ClientApp/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/SWE6813Team2.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWE6813Team2/SWE6813Team2/mono_crash.11a67480d0.0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/GMLogo.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/deleteIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/editIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/homeIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GAMERSMEET.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GMLogo.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/build/GMLogo.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Images/GAMERSMEET.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Images/GMLogo.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/build/Images/GMLogo.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/GAMERSMEET.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/GMLogo.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/GMLogo.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/GAMERSMEET.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/GMLogo.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/Images/GMLogo.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/export.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/esport-background-frame1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/frame1BG.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/videos/esport-background.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/videos/esportBG.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Avatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/LoggedRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/NormalRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/UnloggedRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute/PrivateRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/FortniteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/FortniteContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/collection/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/collection/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MatchHistoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MatchHistoryPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/landing.css" afterDir="false" />
-    </list>
+    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="Switching IDEs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,6 +103,14 @@
       <option name="presentableId" value="Default" />
       <updated>1649259209837</updated>
     </task>
+    <task id="LOCAL-00001" summary="Switching IDEs">
+      <created>1649964131335</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649964131335</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login, landingpage, googlesignin, signup functionalities are working&#10;working on:&#10;1. checks to see if &quot;signinwithgoogle&quot; email exists in database then &#10;2. route &quot;signinwithgoogle&quot; users to enter additional information&#10;3. Adding new user registration info to &quot;user collection&quot; in database&#10;4. Saving all information entered into user's profile&#10;5. Query a list of existing users in database to display on &quot;find a match&quot; page" />
     <MESSAGE value="Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
+    <MESSAGE value="Switching IDEs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching IDEs" />
   </component>
 </project>
