@@ -3,21 +3,37 @@ import React, { useState } from 'react'
 import { useLogin } from '../hooks/useLogin'
 //styles
 import '../styles/login.css'
-import "../styles/loading.css";
+//firebase
+import {  signInWithEmailAndPassword } from 'firebase/auth';
+import { authDb} from '../database/firebase';
 //components
-import Loading from '../components/Loading/Loading.jsx'
+import MessageBar from '../components/MessageBar/messageBar';
+//routing
+import {useNavigate} from "react-router-dom";
+
 
 
 
 export default function LoginPage() {
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
+const [message,setMessage] = useState('');
 const { login, isPending, error } = useLogin()
 
-    const handleSubmit = (e) => {
-           e.preventDefault()
-           login(email, password)
-       }
+let navigate = useNavigate();
+    const handleSubmit = async (e) => {
+           e.preventDefault();
+           try {
+                 let user = await signInWithEmailAndPassword(authDb,email,password);
+                 if(user) setMessage('You are now logged in')
+                 navigate('/dashboard', {replace: true})
+               } catch (err) {
+                 setMessage(err.message);
+               }
+             }
+             const handleChange = (e, isEmail) => {
+               isEmail ? setEmail(e.target.value) : setPassword(e.target.value);
+             }
 
     return (
             <form className='auth-form' onSubmit={handleSubmit}>
@@ -27,7 +43,7 @@ const { login, isPending, error } = useLogin()
                     <input
                         required
                         type='email'
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={e => handleChange(e,true)}
                         value={email}
                     />
                 </label>
@@ -36,7 +52,7 @@ const { login, isPending, error } = useLogin()
                     <input
                         required
                         type='password'
-                        onChange={e => setPassword(e.target.value)}
+                        onChange={e =>  handleChange(e,false)}
                         value={password}
                     />
                 </label>
@@ -45,6 +61,8 @@ const { login, isPending, error } = useLogin()
                 {isPending && <button className='btn' disabled>loading</button>}
                 {error && <div className='error'>{error}</div>}
 
+              <MessageBar message={message} />
             </form>
+
         )
     }

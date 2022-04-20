@@ -18,6 +18,8 @@ import OnboardingModal from './pages/Onboarding /OnboardingModal'
 import Main from './components/Nav/Main.js'
 // Components
 import NavBar from "./components/Nav/NavBar.js";
+import NavBarHome from "./components/Nav/NavBarHome.js";
+import NavBarRegister from "./components/Nav/NavBarRegister.js";
 import Sidebar from "./components/Nav/Sidebar.js";
 // Redux
 /*import { checkUserSession } from './Redux/user/user.actions';
@@ -37,27 +39,32 @@ import { AuthContextProvider } from './context/AuthContext'
 
 
 function App() {
-const { Currentuser, authIsReady } = useAuthContext()
-  return (
 
-   <div className="App">
-  {authIsReady && (
+  return (
           <BrowserRouter>
-            <div className='container'>
-              <NavBar />
               <Routes>
-                    <Route path="/" element={!Currentuser && <LandingPage />} />
-                    <Route path='/login' element={!Currentuser && <LoginPage />   } />
-                    <Route path='/register'element={!Currentuser && <RegisterPage/>}/>
+                    <Route path="/" element={
+                    <>
+                    <NavBarHome />
+                    <LandingPage />
+                    </>
+                    } />
+                    <Route path='/login' element={
+                    <>
+                    <NavBar/>
+                    <LoginPage />
+                     </>
+                     } />
+                    <Route path='/register'element={
+                    <>
+                    <NavBarRegister/>
+                    <RegisterPage/>
+                    </>
+                    }/>
                     <Route path="/onboarding/:userId/*" element={<OnboardingModal />} />
                     <Route path='/*' element={<Main />} />
               </Routes>
-                </div>
-
-                        </BrowserRouter>
-                )}
-                </div>
-
+                </BrowserRouter>
                     );
                    }
 

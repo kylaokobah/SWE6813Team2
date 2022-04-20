@@ -8,7 +8,7 @@ export const useDocument = (collection, id) => {
 
     useEffect(() => {
 
-        const ref = projectFirestore.collection(collection).doc(id)
+        const ref = firestoreDb.collection(collection).doc(id)
 
         const unsub = ref.onSnapshot(snapshot => {
             if (snapshot.data()) {

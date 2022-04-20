@@ -17,6 +17,7 @@ import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 export default function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [displayName, setDisplayName] = useState('')
     const [thumbnail, setThumbnail] = useState(null)
     const [thumbnailError, setThumbnailError] = useState('')
     const { signup, isPending, error } = useSignup()
@@ -74,6 +75,15 @@ export default function Signup() {
                     value={password}
                 />
             </label>
+             <label>
+                  <span>display name:</span>
+                  <input
+                      required
+                      type='text'
+                      onChange={e => setDisplayName(e.target.value)}
+                      value={displayName}
+                  />
+              </label>
             <label>
                 <span>profile thumbnail:</span>
                 <input

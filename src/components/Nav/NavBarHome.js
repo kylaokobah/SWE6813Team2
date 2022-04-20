@@ -10,7 +10,7 @@ import '../../styles/navbar.css'
 import { authDb} from '../../database/firebase'
 
 
-export default function Navbar() {
+export default function NavbarHome() {
 
     const { logout, isPending } = useLogout()
     const { user } = useAuthContext()
@@ -22,23 +22,14 @@ export default function Navbar() {
 
                     <span>Gamers Meet</span>
                 </li>
-
-                {!user ?
-                    <li>
-                            {!isPending && <button className='btn' onClick={logout}>logout</button>}
-                            {isPending && <button className='btn' disabled>logging out</button>}
-                    </li>
-                :
-                    <>
-                            <li>
-                            <Link to='/'>Home</Link>
-                            </li>
-
+                        <li>
+                            <Link to='/login'>Login</Link>
+                        </li>
                         <li>
                             <Link to='/register'>Register</Link>
                         </li>
-                    </>
-                }
+
+
             </ul>
         </div>
 

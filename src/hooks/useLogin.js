@@ -1,24 +1,9 @@
 import { useState, useEffect } from 'react'
 // Firebase
-import {createUserProfileDocument, getCurrentUser } from '../database/collection/users';
 import { authDb, firestoreDb} from '../database/firebase';
-import {
-collection,
-doc,
-getDoc,
-setDoc,
-getDocs,
-query,
-updateDoc,
-arrayUnion,
-arrayRemove,
-Timestamp
-}from 'firebase/firestore';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 //context provider
 import { useAuthContext } from './useAuthContext'
-//Redux
-//import UserActionTypes from '../utils/user.types';
+
 
 export const useLogin = () => {
   const [isCancelled, setIsCancelled] = useState(false)
@@ -29,22 +14,20 @@ export const useLogin = () => {
   const login = async (email, password) => {
     setError(null)
     setIsPending(true)
-    const auth = getAuth();
-    try {
-      // login
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
 
+    try {
+       // login
+       const res = await authDb.signInWithEmailAndPassword(email, password)
+
+      await firestoreDb.collection('user').doc(res.user.uid).update({ online: true })
       // dispatch login action
-      dispatch({ type: 'LOGIN', payload: user })
+      dispatch({ type: 'LOGIN', payload: res.user })
 
       if (!isCancelled) {
         setIsPending(false)
         setError(null)
       }
-    });
+
     }
     catch(err) {
       if (!isCancelled) {

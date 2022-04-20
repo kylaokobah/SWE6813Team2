@@ -1,15 +1,17 @@
 .sidebar {
     width: 300px;
     min-width: 300px;
-    background: var(--primary-color);
+    background: #313338;
     min-height: 100vh;
     box-sizing: border-box;
     position: relative;
-    color: #fff;
+    color: #FFF;
+
   }
   .sidebar-content {
     position: fixed;
     width: inherit;
+    overflow-y: scroll;
   }
   .sidebar .user {
     font-weight: bold;
@@ -21,27 +23,30 @@
   .sidebar .links {
     margin-top: 80px;
     margin-left: 20px;
+    overflow-y: scroll;
+
   }
   .sidebar .links li {
     margin-top: 10px;
+
   }
   .sidebar .links a {
     display: flex;
     padding: 10px;
     text-decoration: none;
     width: 100%;
-    color: #fff;
+    color: #0f0d0d;;
     box-sizing: border-box;
   }
   .sidebar .links img {
     margin-right: 10px;
-    filter: invert(100%);
+
   }
   .sidebar .links a.active {
-    color: #555;
+    color: #fff;
     background: var(--bg-color);
     border-radius: 20px 0 0 20px;
   }
   .sidebar .links .active img {
-    filter: invert(40%);
+     filter: invert(0%);
   }

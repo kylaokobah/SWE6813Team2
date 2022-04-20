@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 //materialUI
-import { Box, Container, Paper } from '@mui/material';
 import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
 //components
-import NavBar from "../components/Nav/NavBar.js";
+import NavBarHome from "../components/Nav/NavBarHome.js";
 import { Helmet } from "react-helmet";
 //routing
 import { NavLink, Link } from 'react-router-dom';
@@ -14,8 +13,7 @@ import "../styles/landing.css";
 import separator from "../assets/images/separator.png";
 import frame1BG from "../assets/images/frame1BG.png";
 import esportBG from "../assets/videos/esportBG.mp4";
-//pages
-import RegisterPage from './RegisterPage'
+
 
 
 
@@ -40,7 +38,6 @@ import RegisterPage from './RegisterPage'
                                    <Link to="/register">
                                    <button
                                    className="e-button"
-                                   // onPress={() => navigate('register')}
                                    > Find a Match
                                    </button>
                                    </Link>

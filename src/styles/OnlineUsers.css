@@ -4,14 +4,18 @@
     padding: 30px;
     box-sizing: border-box;
     background: #fbfbfb;
-    color: var(--heading-color);
+    color: #0f0d0d;
+    position: relative;
+    overflow-y: scroll;
+
   }
   .user-list h2 {
     text-align: right;
     margin-bottom: 40px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #0f0d0d;
     font-size: 1.2em;
+    color: #0f0d0d;
   }
   .user-list .user-list-item {
     display: flex;
@@ -34,4 +38,5 @@
     background: #0be200;
     border-radius: 50%;
     margin-top: 2px;
+    overflow-y: scroll;
 }

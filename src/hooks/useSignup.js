@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { authDb, firestoreDb, storageDb } from '../database/firebase'
+import { authDb, firestoreDb, storageDb, timestamp } from '../database/firebase'
 import { useAuthContext } from './useAuthContext'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { collection, doc, getDoc, setDoc, getDocs, serverTimestamp}  from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc, getDocs}  from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {useNavigate} from "react-router-dom";
 
@@ -19,7 +19,7 @@ export const useSignup = () => {
    const navigate = useNavigate();
 
 
-const signup = async (email, password, thumbnail) => {
+const signup = async (email, password, thumbnail, displayName, createdAt) => {
     setError(null)
     setIsPending(true)
 
@@ -39,9 +39,12 @@ const signup = async (email, password, thumbnail) => {
       await res.user.updateProfile({ photoURL: imgUrl })
 
       await firestoreDb.collection('user').doc(res.user.uid).set({
+        online: true,
         photoURL: imgUrl,
         email,
         password,
+        displayName,
+        createdAt: timestamp.fromDate(new Date()),
       })
 
       // dispatch login action
