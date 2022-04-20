@@ -1,11 +1,17 @@
-import { NavLink } from 'react-router-dom'
-import Avatar from './Avatar'
-import { useAuthContext } from '../../hooks/useAuthContext'
+import { NavLink, Link } from 'react-router-dom'
+import Avatar from '../Avatar/Avatar'
 import '../../styles/Sidebar.css'
 import DashboardIcon from '../../assets/images/dashboard_icon.svg'
 import AddIcon from '../../assets/images/add_icon.svg'
+//material UI
+import SearchIcon from '@mui/icons-material/Search';
+//hooks
+import { useAuthContext } from '../../hooks/useAuthContext'
+
+
 
 export default function Sidebar() {
+
 
     const { user } = useAuthContext()
 
@@ -14,20 +20,20 @@ export default function Sidebar() {
             <div className='sidebar-content'>
                 <div className='user'>
                     <Avatar src={user.photoURL} />
-                    <p>hey {user.displayName}!</p>
+                    <p>hey {user.epicName}!</p>
                 </div>
                 <nav className='links'>
                     <ul>
                         <li>
-                            <NavLink exact to='/'>
+                            <NavLink exact to='/dashboard'>
                                 <img src={DashboardIcon} alt='dashboard icon' />
                                 <span>dashboard</span>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/create'>
+                                <NavLink to='/findMatch'>
                                 <img src={AddIcon} alt='add icon' />
-                                <span>new project</span>
+                                <span>Find a Match</span>
                             </NavLink>
                         </li>
                     </ul>

@@ -43,25 +43,46 @@ const port = process.env.PORT || 5000;
 
 app.listen(port);*/
 
-import React from 'react';
+/*import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from './Redux/configureStore';
 import App from './App';
 import { AuthContextProvider } from './context/AuthContext'
+
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AuthContextProvider>
+      <App />
+    </AuthContextProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);*/
+
+import React from 'react';
+//routing
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+//reducx
+import { Provider } from 'react-redux';
+import { store } from './Redux/configureStore';
+//pages
+import App from './App';
+//styling
+import './styles/index.css';
+//context API
+import { AuthContextProvider } from './context/AuthContext'
+
 
 
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <AuthContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-      </AuthContextProvider>
+  <AuthContextProvider>
+        <App />
+   </AuthContextProvider>
   </Provider>,
   document.getElementById('root')
 );

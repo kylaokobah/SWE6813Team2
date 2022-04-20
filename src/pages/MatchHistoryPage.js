@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import ItemCard from "../components/Card/ItemCard";
 import NavBar from "../components/Nav/NavBar";
 
-
 const MatchHistoryPage = () => {
+
+//const MatchHistoryPage = () => {
   const [infos, setInfos] = useState([]);
   const [currentItem, setCurrentItem] = useState(1);
   const [itemPerPage] = useState(16);
@@ -15,7 +16,7 @@ const MatchHistoryPage = () => {
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
   const currentItems = infos.slice(indexOfFirstItem, indexOfLastItem);
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetchdata();
   }, []);
 
@@ -26,8 +27,8 @@ const MatchHistoryPage = () => {
     let data = await response.json();
     console.log(data.data);
     setInfos(data.data);
-    setLoading(true);
-  }
+    setLoading(true);*/
+  //}
   return (
     //<div className="h-screen overflow-y-scroll bg-black text-white overflow-hidden">
     <div>

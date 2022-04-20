@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+/*import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { FindMatchesData } from '../../utils/constants';
 import { RootState } from '../configureStore';
+import { useAppDispatch, useAppSelector } from '../../hooks/index.js';
 
 export interface findMatchState {
     findMatchList: FindMatchesData[];
@@ -22,4 +23,4 @@ export const findMatchSlice = createSlice({
 
 export const {setfindMatchList} = findMatchSlice.actions;
 export const getfindMatchList = (state: RootState) => state.findMatch.findMatchList;
-export default findMatchSlice.reducer;
+export default findMatchSlice.reducer;*/

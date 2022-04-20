@@ -1,0 +1,26 @@
+@use "../../styles/theme" as *;
+.messageBar {
+  font-size:1rem;
+  border-radius:0.2em;
+  padding:1em 0em;
+  width:80%;
+  margin:0 auto;
+  margin-bottom:2em;
+  .inner {
+    width:80%;
+    margin:0 auto;
+    text-align:left;
+  }
+  p {
+    font-size:0.8em;
+    font-weight: bold;
+  }
+  &.error {
+    background: #FFC0C0;
+    color: #CA4545;
+  }
+  &.success {
+    background:#c3fad7;
+    color:#40cf74;
+  }
+}

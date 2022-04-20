@@ -1,5 +1,5 @@
 //console.log('loaded events');
-$(function(){
+/*$(function(){
     var submitBtn = $('#submit');
     var epic = $('#epic');
     var platfromDropDownBtn = $('#platform a');
@@ -48,4 +48,4 @@ $(function(){
         // console.table(data);
         results.html(JSON.stringify(data, undefined, 2));
     }
-});
+});*/

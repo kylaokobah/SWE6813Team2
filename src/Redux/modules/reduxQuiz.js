@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { MatchMakerQuiz } from '../../utils/constants';
+/*import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+//import { MatchMakerQuiz } from '../../utils/constants';
 import { RootState } from '../configureStore';
+import { useAppDispatch, useAppSelector } from '../../hooks/index.js';
 
 export interface quizState {
     quizData: MatchMakerQuiz[];
@@ -22,4 +23,4 @@ export const quizSlice = createSlice({
 
 export const {setQuizData} = quizSlice.actions;
 export const getQuizData = (state: RootState) => state.quiz.quizData;
-export default quizSlice.reducer;
+export default quizSlice.reducer;*/

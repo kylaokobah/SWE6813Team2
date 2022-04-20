@@ -1,4 +1,4 @@
-import axios from "axios";
+/*import axios from "axios";
 
 export default function GetFortniteValues(
   fortnite_username,
@@ -74,4 +74,4 @@ export default function GetFortniteValues(
   function findStat(arr, val) {
     return arr.find((stat) => stat.key === val).value;
   }
-}
+}*/

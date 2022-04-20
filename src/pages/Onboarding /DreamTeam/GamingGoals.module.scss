@@ -1,0 +1,110 @@
+@use "../../../styles/theme" as *;
+
+
+.inner {
+  width: 80%;
+  margin:0 auto;
+}
+
+.gamingGoals {
+  button {
+    cursor: pointer;
+    outline:none;
+    border-style:none;
+    border-radius:0.2em;
+    background: $primary-500;
+    color: $gray-700;
+    padding: 0.8em 2em;
+    margin-top:1.2em;
+    width: 80%;
+    font-weight: bold;
+    margin-bottom:4em;
+  }
+}
+
+.gamingHeader {
+  text-align: left;
+  margin-top:1.6em;
+    h4 {
+      font-size:1.4em;
+      color: $gray-700;
+      text-align:left;
+    }
+    p {
+      font-size: 0.9em;
+      color: $gray-600;
+      margin-top:0.2em;
+      width:90%;
+    }
+
+}
+.gamingGoalsContent {
+  text-align: left;
+  .gamingGoalItem {
+    background: $primary-400;
+    color:$primary-600;
+    min-height:4em;
+    cursor: pointer;
+    border-radius:0.4em;
+    min-height:70px;
+    padding:1em 0.8em 1em 2em;
+    display: flex;
+    align-items: center;
+    gap:1em;
+    font-size:0.9em;
+    p {
+      width: 80%;
+    }
+    &:not(:first-child) {
+      margin-top:0.8em;
+    }
+    svg {
+      font-size:1.4em;
+    }
+    &.selected, &:hover, &:focus {
+      background:#aea1f7;
+      color:white;
+      font-weight: bold;
+    }
+  }
+}
+
+.subContent {
+  &:not(:first-child) {
+    margin-top:2em;
+  }
+}
+
+.subHeading {
+  color: $gray-600;
+  font-size:1.1em;
+  font-weight:400;
+  margin-bottom:0.5em;
+  text-align: left;
+}
+
+.gamingTypes {
+  text-align: left;
+  display: flex;
+  gap: 0.8em;
+  .gamingType {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #F3F0FF;
+    &.selected {
+      border: 2px solid #7861D7;
+    }
+    .img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 150px;
+      width: 100%;
+      
+    }
+    p {
+      padding: 1em;
+    }
+  }
+}

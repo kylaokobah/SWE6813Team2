@@ -1,4 +1,4 @@
-import axios from 'axios';
+/*import axios from 'axios';
 
 const instance = axios.create();
 
@@ -15,4 +15,4 @@ instance.interceptors.response.use((response) => {
     return error;
 });
 
-export default client;
+export default client;*/

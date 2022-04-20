@@ -1,0 +1,91 @@
+@use "../../../styles/theme" as *;
+.createProfileHeader {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  margin-top:1.6em;
+  h4 {
+    font-size:1.4em;
+    color: $gray-700;
+    text-align:left;
+  }
+  p {
+    font-size: 0.9em;
+    color: $gray-600;
+  }
+}
+.createProfileForm {
+  margin-top:2rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  img {
+    background: $gray-400;
+    border-radius:0.4em;
+    min-height:200px;
+    width:100%;
+    outline:None;
+    border: 0px;
+    margin-top:1em;
+    margin-bottom:0.4em;
+  }
+  
+  input[type=file]::file-selector-button {
+    background: #aea1f7;
+    border-style: none;
+    font-family: 'Roboto',sans-serif;
+    border-radius:0.2em;
+    padding:0.6em 2em;
+    font-weight: bold;
+    color: $gray-200;
+  }
+
+}
+.formContent {
+  margin-top:2em;
+  label {
+    &:not(:first-child) {
+      margin-top:1.4em;
+    }
+  }
+}
+.createProfileForm{
+  label {
+    color:$gray-600;
+    font-size:0.8em;
+    text-align:left;
+    display:block;
+    margin-bottom:0.4em;
+
+  }
+  input, textarea {
+    border:1px solid $gray-500;
+    width:100%;
+    padding:0.8em;
+    background:inherit;
+    outline:none;
+    border-radius:0.2em;
+    transition:border 0.8s ease-in-out;
+    &:hover, &:focus {
+     border: 2px solid #aea1f7;
+    }
+  }
+  textarea {
+    min-height:140px;
+    resize:none;
+    font-family:'Roboto',sans-serif;
+    color: $gray-600;
+  }
+  button {
+    outline:none;
+    border-style:none;
+    border-radius:0.2em;
+    background: $primary-500;
+    color: $gray-700;
+    padding: 0.8em 2em;
+    margin-top:1.2em;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom:4em;
+  }
+}

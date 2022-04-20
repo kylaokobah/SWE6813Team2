@@ -1,12 +1,9 @@
-import React, { Component } from "react";
+mport React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "../styles/NotFound.css";
 
-import {
-    forestBG,
-    teemo
-} from "../assets/export.js";
+
 
 
 export default class NotFound extends Component {

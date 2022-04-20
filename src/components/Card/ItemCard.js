@@ -1,4 +1,4 @@
-import Image from "next/image";
+/*import Image from "next/image";
 import React, { useState } from "react";
 
 const ItemCard = ({ name, image, rarity, vbucks, type }) => {
@@ -55,4 +55,4 @@ const ItemCard = ({ name, image, rarity, vbucks, type }) => {
   );
 };
 
-export default ItemCard;
+export default ItemCard;*/

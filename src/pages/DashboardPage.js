@@ -37,7 +37,9 @@ import '../styles/Dashboard.css'
 export default function DashboardPage() {
     return (
         <div>
-            Dashboard
-        </div>
+                    <h2 className='page-title'>dashboard</h2>
+
+
+                </div>
     )
 }

@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+/*import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { PreviousMatchesData} from '../../utils/constants';
 import { RootState } from '../configureStore';
+import { useAppDispatch, useAppSelector } from '../../hooks/index.js';
 
 export interface previousMatchesState {
     previousMatchList: PreviousMatchesData[];
@@ -22,4 +23,4 @@ export const previousMatchSlice = createSlice({
 
 export const {setPreviousMatchList} = previousMatchSlice.actions;
 export const getPreviousMatchList = (state: RootState) => state.previousMatch.previousMatchList;
-export default previousMatchSlice.reducer;
+export default previousMatchSlice.reducer;*/

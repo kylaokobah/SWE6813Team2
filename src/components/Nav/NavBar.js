@@ -1,49 +1,44 @@
-import { Link } from 'react-router-dom'
+import React
+  //useEffect,
+ // useState
+ from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
+import { getAuth, signOut} from "firebase/auth";
 import '../../styles/navbar.css'
+import { authDb} from '../../database/firebase'
 
 
+export default function Navbar() {
 
-export default function NavBar() {
-
-const { logout, isPending } = useLogout()
+    const { logout, isPending } = useLogout()
     const { user } = useAuthContext()
 
-    /*const navigate=  useNavigate()
-        const location= useLocation()
-        const pathMatchRoute=(route)=>{
-                if(route==location.pathname){
-                    return true
-                }
-        }*/
-
     return (
-       /* <div className='navbar'>
-            <nav className="navbarNav">
-                        <ul className="navbarListItems">
-                          <li className="navbarListItem" onClick={()=>navigate('/')}>
-                           <HomeIcon fill={pathMatchRoute('/') ? '#2c2c2c' : '#8f8f8f' } width='36px' height='36px'/>
-                                           <p className={pathMatchRoute('/landing') ? 'navbaeListItemNameActive' : 'navbaeListItemName'}>Explore</p>
-                                        </li>*/
- <div className='navbar'>
+        <div className='navbar'>
             <ul>
                 <li className='logo'>
-                    <span>Gamers Meet Logo</span>
+
+                    <span>Gamers Meet</span>
                 </li>
 
-                {user ?
+                {!user ?
                     <li>
                             {!isPending && <button className='btn' onClick={logout}>logout</button>}
                             {isPending && <button className='btn' disabled>logging out</button>}
                     </li>
                 :
                     <>
+                            <li>
+                            <Link to='/'>Home</Link>
+                            </li>
+
                         <li>
-                            <Link to='/login'>login</Link>
+                            <Link to='/login'>Login</Link>
                         </li>
                         <li>
-                            <Link to='/register'>signup</Link>
+                            <Link to='/register'>Register</Link>
                         </li>
                     </>
                 }
@@ -53,3 +48,4 @@ const { logout, isPending } = useLogout()
     )
 
 }
+
