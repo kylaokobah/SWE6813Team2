@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.296a428b.css",
+    "main.js": "/static/js/main.5f2f0294.js",
+    "static/media/esportBG.mp4": "/static/media/esportBG.f9465bc3955bfd73bc4c.mp4",
+    "static/media/frame1BG.png": "/static/media/frame1BG.34105ecec80af99acd30.png",
+    "static/media/separator.png": "/static/media/separator.417d19e0da57517f9df9.png",
+    "index.html": "/index.html",
+    "static/media/dashboard_icon.svg": "/static/media/dashboard_icon.bc800f3b9286b71005c3f026ebfaa958.svg",
+    "static/media/add_icon.svg": "/static/media/add_icon.376e9b6a44e5b3142f1239a3cc8504d0.svg",
+    "main.296a428b.css.map": "/static/css/main.296a428b.css.map",
+    "main.5f2f0294.js.map": "/static/js/main.5f2f0294.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.296a428b.css",
+    "static/js/main.5f2f0294.js"
+  ]
+}
