@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { authDb, firestoreDb } from '../database/firebase'
 import { useAuthContext } from './useAuthContext'
-import { userSignOut} from '../Redux/user/user.actions'
+
 
 export const useLogout = () => {
   const [isCancelled, setIsCancelled] = useState(false)
@@ -16,7 +16,7 @@ export const useLogout = () => {
     try {
 
       const { uid } = user
-      await firestoreDb.collection('users').doc(uid).update({ online: false })
+      await firestoreDb.collection('user').doc(uid).update({ online: false })
 
       // sign the user out
       await authDb.signOut()

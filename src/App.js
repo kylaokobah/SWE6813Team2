@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 //routing
-import {Route, Routes, Router, BrowserRouter, useNavigate, Navigate} from 'react-router-dom'
+import {Route, Routes, Router, BrowserRouter, useNavigate, Navigate, useParams } from 'react-router-dom'
 import ProtectedRoute from './components/Nav/protectedRoute';
 // Pages
 import LoginPage from './pages/LoginPage.js';
 import LandingPage from './pages/LandingPage.js';
 import RegisterPage from './pages/RegisterPage.js';
 import DashboardPage from './pages/DashboardPage.js';
-import findMatchPage from './pages/findMatchPage.js';
+import findMatchPage from './pages/findMatchPage';
 import MatchHistoryPage from './pages/MatchHistoryPage.js';
 import ProfilePage from './pages/ProfilePage.js';
 import OnlineUsers from './components/OnlineUsers/OnlineUsers'
@@ -35,6 +35,7 @@ import { getAuth, signOut } from "firebase/auth";
 //hooks
 import { useAuthContext } from './hooks/useAuthContext'
 import { AuthContextProvider } from './context/AuthContext'
+
 
 
 

@@ -4,7 +4,304 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="On boarding form, side bar navigation, and online users added. Register errors fixed." />
+    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="On boarding form, side bar navigation, and online users added. Register errors fixed.">
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/statsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/fortnite/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/PCIcon.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/PSNIcon.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/XBoxIcon.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PlatformButton/PlatformButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchCard/matchCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchCard/matchCard.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchCard/matchProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchCard/profile.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchList/matchList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/matchList/matchList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/collection/findMatchInputs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/collection/playerProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useGenerate.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowSize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/findMatchPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/findMatchPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/consts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage.rules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAMERSMEET/.vs/GAMERSMEET/xs/UserPrefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.296a428b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.296a428b.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.5f2f0294.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.5f2f0294.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.5f2f0294.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/add_icon.376e9b6a44e5b3142f1239a3cc8504d0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/dashboard_icon.bc800f3b9286b71005c3f026ebfaa958.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/esportBG.f9465bc3955bfd73bc4c.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/frame1BG.34105ecec80af99acd30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/separator.417d19e0da57517f9df9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.env" beforeDir="false" afterPath="$PROJECT_DIR$/config.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/05ae4768aa83e4d50cc35b57ca9e5f9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/e88f7f7d7510e9b4c500416ee08a82fb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/SECURITY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/UPGRADE_GUIDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/xhr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/Cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/CancelToken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/isCancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/Axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/InterceptorManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/buildFullPath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/createError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/dispatchRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/enhanceError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/mergeConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/settle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/transformData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults/transitional.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/env/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/env/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/bind.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/buildURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/combineURLs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/cookies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/deprecatedMethod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAbsoluteURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAxiosError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isURLSameOrigin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/normalizeHeaderName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/parseHeaders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/spread.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/toFormData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/validator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-unfetch/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-unfetch/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-unfetch/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-unfetch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-unfetch/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/authenticate/AUTH_BASE_URL.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/authenticate/exchangeCodeForAccessToken.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/authenticate/exchangeNpssoForCode.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/authenticate/exchangeRefreshTokenForAuthTokens.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/authenticate/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/all-call-options.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/auth-tokens-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/authorization-payload.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/call-valid-headers.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/get-user-friends-account-ids-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/profile-from-account-id-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/profile-from-user-name-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/rarest-thin-trophy.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/social-account-result.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/title-platform.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/title-thin-trophy.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/title-trophies-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/title-trophy-groups-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-counts.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-group-earnings.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-group.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-rarity.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-title.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy-type.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/trophy.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/universal-search-domain-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/universal-search-domains.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/universal-search-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/user-thin-trophy.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/user-titles-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/user-trophies-earned-for-title-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/user-trophy-group-earnings-for-title-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/models/user-trophy-profile-summary-response.model.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.cjs.development.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.cjs.development.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.cjs.production.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.cjs.production.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/psn-api.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/search/SEARCH_BASE_URL.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/search/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/search/makeUniversalSearch.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/test/generators/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/test/generators/title-platform.generator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/test/generators/trophy-counts.generator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/test/generators/trophy-title.generator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/TROPHY_BASE_URL.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/title/getTitleTrophies.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/title/getTitleTrophyGroups.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/title/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/user/getUserTitles.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/user/getUserTrophiesEarnedForTitle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/user/getUserTrophyGroupEarningsForTitle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/user/getUserTrophyProfileSummary.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/trophy/user/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/user/USER_BASE_URL.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/user/getProfileFromAccountId.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/user/getProfileFromUserName.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/user/getUserFriendsAccountIds.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/user/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/utils/buildRequestUrl.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/dist/utils/call.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/AUTH_BASE_URL.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeCodeForAccessToken.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeCodeForAccessToken.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeNpssoForCode.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeNpssoForCode.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeRefreshTokenForAuthTokens.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/exchangeRefreshTokenForAuthTokens.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/authenticate/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/all-call-options.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/auth-tokens-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/authorization-payload.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/call-valid-headers.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/get-user-friends-account-ids-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/profile-from-account-id-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/profile-from-user-name-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/rarest-thin-trophy.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/social-account-result.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/title-platform.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/title-thin-trophy.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/title-trophies-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/title-trophy-groups-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-counts.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-group-earnings.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-group.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-rarity.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-title.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy-type.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/trophy.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/universal-search-domain-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/universal-search-domains.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/universal-search-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/user-thin-trophy.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/user-titles-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/user-trophies-earned-for-title-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/user-trophy-group-earnings-for-title-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/models/user-trophy-profile-summary-response.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/search/SEARCH_BASE_URL.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/search/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/search/makeUniversalSearch.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/search/makeUniversalSearch.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/test/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FortniteApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/test/generators/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/test/generators/title-platform.generator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/test/generators/trophy-counts.generator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/test/generators/trophy-title.generator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/TROPHY_BASE_URL.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/title/getTitleTrophies.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/title/getTitleTrophies.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/title/getTitleTrophyGroups.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/title/getTitleTrophyGroups.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/title/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTitles.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTitles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophiesEarnedForTitle.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophiesEarnedForTitle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophyGroupEarningsForTitle.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophyGroupEarningsForTitle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophyProfileSummary.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/getUserTrophyProfileSummary.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/trophy/user/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/USER_BASE_URL.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getProfileFromAccountId.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getProfileFromAccountId.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getProfileFromUserName.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getProfileFromUserName.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getUserFriendsAccountIds.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/getUserFriendsAccountIds.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/user/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/utils/buildRequestUrl.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/utils/buildRequestUrl.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/utils/call.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/psn-api/src/utils/call.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/dist/unfetch.umd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/polyfill/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/polyfill/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/polyfill/polyfill.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/src/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/unfetch/src/index.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/modules/reduxFindMatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/modules/reduxPreviousMatches.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/modules/reduxQuiz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/user/user.actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/user/user.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/user/user.selectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/user/user.types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/websocketActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/GetFortniteValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FortniteTracker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/ItemCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavBarRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavBarRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/FortniteContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/collection/useCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/collection/useCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/collection/useFirebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/collection/useFirebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFortnite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFortnite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useLogout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useLogout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useSignup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useSignup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MatchHistoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MatchHistoryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFoundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding /CreateProfile/CreateProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding /CreateProfile/CreateProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding /DreamTeam/GamingGoals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding /DreamTeam/GamingGoals.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding /OnboardingModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding /OnboardingModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegisterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/findMatchPage.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +349,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/public/manifest.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/database/collection/users.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/Nav/NavBar.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -72,26 +368,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Nav" />
+    <property name="kotlin.migration.detection.enabled" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/Nav" />
+      <recent name="$PROJECT_DIR$/src/Redux" />
+      <recent name="$PROJECT_DIR$/src/Redux/fortnite" />
+      <recent name="$PROJECT_DIR$/src/hooks" />
+      <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/pages/Onboarding " />
-      <recent name="$PROJECT_DIR$/src/pages/Onboarding /DreamTeam" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/pages/Onboarding " />
-      <recent name="$PROJECT_DIR$/src/pages/Onboarding /CreateProfile" />
-      <recent name="$PROJECT_DIR$/src/components/Wrappers" />
-      <recent name="$PROJECT_DIR$/src/database/collection" />
-      <recent name="$PROJECT_DIR$/src/Redux/user" />
+      <recent name="$PROJECT_DIR$/src/Redux/fortnite" />
+      <recent name="$PROJECT_DIR$/src/Redux" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/pages/findMatch" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -117,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650449695159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="On boarding form, side bar navigation, and online users added. Register errors fixed.">
+      <created>1650462908279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650462908279</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,26 +1,56 @@
-
+import React, { useRef, useState } from 'react'
+//firebase
 import { updateProfile } from '@firebase/auth';
 import { doc, setDoc } from '@firebase/firestore';
-import React, { useRef, useState } from 'react'
 import { authDb, firestoreDb } from '../../../database/firebase';
+//components
 import MessageBar from '../../../components/MessageBar/messageBar';
+import PlatformButton from '../../../components/PlatformButton/PlatformButton'
 import styles from "./createProfile.module.scss";
+//routing
 import {useNavigate, useParams} from "react-router-dom";
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
+import {
+    fetchProfile,
+    setProfile,
+    setSearchValue,
+    toggleToCompare,
+    clearCompares,
+    clearRecentlySearched,
+    setSelectedPlatform
+} from '../../../Redux/fortnite/actions';
+import {
+    getProfileUsernames,
+    getProfileByUsername,
+    getErrorMessage,
+    getActiveProfile,
+    getSearchValue,
+    getProfilesToCompare,
+    getCompareRows,
+    isLoading,
+    getSelectedPlatform
+} from '../../../Redux/fortnite/selectors';
 
-function CreateProfile() {
+  function CreateProfile() {
   const [epicName,setEpicName] = useState('');
   const [platform,setPlatform] = useState('');
-  const [language,setLanguage] = useState('');
-  const [matchesPlayed,setMatchesPlayed] = useState('');
-  const [numSolo,setNumSolo] = useState('');
-  const [numDuo,setNumDuo] = useState('');
-  const [numSquad,setNumSquad] = useState('');
-  const [numTrio,setNumTrio] = useState('');
-  const [timePlayed,setTimePlayed] = useState('');
-  const [winPercentage,setWinPercentage] = useState('');
+  const [compareView, setCompareView] = useState('all');
   const [bio,setBio] = useState('');
-
   const [message,setMessage] = useState(null);
+
+      // Redux
+      const dispatch = useDispatch();
+      const profileUsernames = useSelector(getProfileUsernames);
+      const profileCompareRows = useSelector((state) => getCompareRows(state, compareView));
+      const profilesToCompare = useSelector(getProfilesToCompare);
+      const activeProfile = useSelector(getActiveProfile);
+      const searchValue = useSelector(getSearchValue);
+      const error = useSelector(getErrorMessage);
+      const user = useSelector((state) => getProfileByUsername(state, activeProfile))
+      const loading = useSelector(isLoading);
+      const platform = useSelector(getSelectedPlatform);
+
   let navigate = useNavigate();
   let params = useParams();
 
@@ -34,7 +64,6 @@ function CreateProfile() {
       let t = await setDoc(doc(firestoreDb,"player_profile", authDb.currentUser.uid), {
         aboutMe: bio,
         isOnline: true,
-        platform,
         language,
         matchesPlayed,
         numSolo,
@@ -46,7 +75,7 @@ function CreateProfile() {
       });
       console.log(t);
       setMessage({text: 'Profile successfully created', isError:false})
-      navigate(`/onboarding/${params.userId}/GamingGoals`,{replace: true});
+      navigate(`/onboarding/${params.userId}/gamingGoals`,{replace: true});
 
     } catch(err) {
       setMessage({text:'Oops! Your profile could not be created', isError: true})
@@ -66,7 +95,7 @@ function CreateProfile() {
       <form onSubmit={submitForm} className={styles.createProfileForm}>
         <img  />
         <div className={styles.formContent}>
-          <label htmlFor='username'>Username</label>
+          <label htmlFor='epicName'>Epic name</label>
           <input type='text' value={epicName} name='Epic name' onChange={(e) => handleChange(e,setEpicName)} />
           <label htmlFor='bio'>About Me</label>
           <textarea type='text' name='bio' value={bio} onChange={(e) => handleChange(e,setBio)} />

@@ -26,7 +26,7 @@ function OnboardingModal() {
     <div className={styles.modalWrapper}>
       <div className={styles.modal}>
         <aside className={styles.modalSidebar}>
-          {onboardingSections.map((section,index) => {
+          {onboardingSections.map((section, index) => {
             let onboardingPath = params['*'];
               return (
                   <div className={`${styles.sidebarItem} ${section.link === onboardingPath ? styles.selected : ''} `}>

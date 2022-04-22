@@ -1,25 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { authDb, firestoreDb, storageDb, timestamp } from '../database/firebase'
 import { useAuthContext } from './useAuthContext'
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { collection, doc, getDoc, setDoc, getDocs}  from 'firebase/firestore';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {useNavigate} from "react-router-dom";
-
-const COLLECTION_NAME = "user";
-
-
 
 export const useSignup = () => {
   const [isCancelled, setIsCancelled] = useState(false)
   const [error, setError] = useState(null)
   const [isPending, setIsPending] = useState(false)
   const { dispatch } = useAuthContext()
-  const [message,setMessage] = useState(null);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
-const signup = async (email, password, thumbnail, displayName, createdAt) => {
+const signup = async (email, password, thumbnail, createdAt) => {
     setError(null)
     setIsPending(true)
 
@@ -28,31 +22,36 @@ const signup = async (email, password, thumbnail, displayName, createdAt) => {
         const res = await authDb.createUserWithEmailAndPassword(email, password)
 
         if (!res) {
-          throw new Error('Could not complete signup')
-        }
+           console.log('No user found')
+           return
+         }
 
+      //adds thumbnail to firebase storage file titled: thumbnails
       const uploadPath = `thumbnails/${res.user.uid}/${thumbnail.name}`
       const img = await storageDb.ref(uploadPath).put(thumbnail)
       const imgUrl = await img.ref.getDownloadURL()
 
 // add display name to user
       await res.user.updateProfile({ photoURL: imgUrl })
-
+      if (isCancelled || isPending){
+      console.log('User registration has failed.')
+      } else
       await firestoreDb.collection('user').doc(res.user.uid).set({
         online: true,
         photoURL: imgUrl,
         email,
         password,
-        displayName,
         createdAt: timestamp.fromDate(new Date()),
       })
+      console.log('username has been added')
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
 
+     console.log('almost')
+      navigate(`/onboarding/${user.user.uid}/createProfile`)
 
-      navigate(`/onboarding/${res.user.uid}/createProfile`)
-
+      console.log('made it')
 
       if (!isCancelled) {
         setIsPending(false)

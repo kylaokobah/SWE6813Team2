@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from "react"
 import { firestoreDb } from "../firebase"
 import { collection, doc, getDoc, setDoc, getDocs, query, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 import { getDatabase, ref, push, set } from "firebase/database";
-const COLLECTION_NAME = "user";
 
+//used to get/query and sort data
 export const useCollection = (collection, _query, _orderBy) => {
   const [documents, setDocuments] = useState(null)
   const [error, setError] = useState(null)

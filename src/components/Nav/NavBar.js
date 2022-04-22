@@ -23,22 +23,16 @@ export default function Navbar() {
                     <span>Gamers Meet</span>
                 </li>
 
-                {!user ?
-                    <li>
-                            {!isPending && <button className='btn' onClick={logout}>logout</button>}
-                            {isPending && <button className='btn' disabled>logging out</button>}
-                    </li>
-                :
-                    <>
+
                             <li>
                             <Link to='/'>Home</Link>
                             </li>
 
                         <li>
+
                             <Link to='/register'>Register</Link>
                         </li>
-                    </>
-                }
+
             </ul>
         </div>
 

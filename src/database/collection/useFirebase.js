@@ -44,7 +44,7 @@ const firestoreReducer = (state, action) => {
   const [isCancelled, setIsCancelled] = useState(false)
 
   // collection ref
-  const ref = projectFirestore.collection(collection)
+  const ref = firestoreDb.collection(collection)
 
   // only dispatch is not cancelled
   const dispatchIfNotCancelled = (action) => {
@@ -53,7 +53,7 @@ const firestoreReducer = (state, action) => {
     }
   }
 
-  // add a document
+  // add a general document
   const addDocument = async (doc) => {
     dispatch({ type: 'IS_PENDING' })
 
@@ -67,7 +67,7 @@ const firestoreReducer = (state, action) => {
     }
   }
 
-  // delete a document
+  // delete a general document
   const deleteDocument = async (id) => {
     dispatch({ type: 'IS_PENDING' })
 
@@ -100,3 +100,5 @@ const firestoreReducer = (state, action) => {
   return { addDocument, deleteDocument, updateDocument, response }
 
 }
+
+

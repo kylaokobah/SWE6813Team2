@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import { useAuthContext } from '../../hooks/useAuthContext'
 import DashboardPage from '../../pages/DashboardPage.js';
-import findMatchPage from '../../pages/findMatchPage.js';
+import findMatchPage from '../../pages/findMatchPage';
 import MatchHistoryPage from '../../pages/MatchHistoryPage.js';
 import ProfilePage from '../../pages/ProfilePage.js';
 import ProtectedRoute from './protectedRoute';
@@ -33,10 +33,11 @@ const { user, authIsReady } = useAuthContext()
         <MatchHistoryPage />
         </>
         } />
-        <Route path='/dashboard'element={
+
+        <Route path='/dashboard' element={
         <>
+        user ? <DashboardPage /> : <Navigate to='' />}
          {user && <Sidebar />}
-        <DashboardPage />
         </>
         } />
       </Routes>

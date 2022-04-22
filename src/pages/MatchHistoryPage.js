@@ -1,4 +1,4 @@
-import { CircularProgress } from "@material-ui/core";
+/*import { CircularProgress } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import ItemCard from "../components/Card/ItemCard";
 import NavBar from "../components/Nav/NavBar";
@@ -29,7 +29,7 @@ const MatchHistoryPage = () => {
     setInfos(data.data);
     setLoading(true);*/
   //}
-  return (
+ /* return (
     //<div className="h-screen overflow-y-scroll bg-black text-white overflow-hidden">
     <div>
       <NavBar />
@@ -83,4 +83,4 @@ const MatchHistoryPage = () => {
   );
 };
 
-export default MatchHistoryPage;
+export default MatchHistoryPage;*/

@@ -5,7 +5,15 @@ import {RiBookOpenLine} from "react-icons/ri";
 import { authDb, firestoreDb } from '../../../database/firebase';
 import { doc, setDoc, updateDoc } from '@firebase/firestore';
 import { useNavigate } from 'react-router';
-
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import { PLATFORM } from '../../../utils/consts';
+import Popover from '@material-ui/core/Popover';
+import IconButton from '@material-ui/core/IconButton';
+import PCIcon from '../../../assets/images/PCIcon';
+import PSNIcon from '../../../assets/images/PSNIcon';
+import XBoxIcon from '../../../assets/images/XBoxIcon';
 
 
 
@@ -19,17 +27,22 @@ const gamingGoalsList = [{
   selected: false
 }, {
   id: 2,
-  name: 'I want to play Fortnite as a team player!',
+  name: 'I want to meet more Fortnite players!',
   selected: false
 }]
 
-const gamingGoalIcons = [<BiBrain /> , <BiGroup />, <RiBookOpenLine />]
+const gamingGoalIcons = [<EmojiEventsIcon/> , <SportsEsportsIcon />, <EmojiPeopleIcon />]
 
-const gamingTypes = ['Aggressive', 'Casual'];
+const gamingPlatformIcons= [  <PSNIcon />, <XBoxIcon />, <PCIcon />]
+
+const gamingTypes = ['Competitive', 'Aggressive', 'Perfectionist', 'Explorer', 'Socializer'];
+
+
 
 function GamingGoals() {
   const [gamingGoals, setGoals] = useState(gamingGoalsList)
   const [gamingType, setType] = useState();
+  const [platform, setPlatform] = useState();
   const navigate = useNavigate();
 
   const selectGoals = (index) => {

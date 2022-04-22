@@ -1,5 +1,4 @@
 import React, {useEffect, useContext, useRef, useState } from 'react'
-import {useFortniteContext} from '../hooks/useFortnite'
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import fortniteImg from '../assets/images/fortnite-logo.png'
@@ -7,7 +6,7 @@ import fortniteImg from '../assets/images/fortnite-logo.png'
 const ProfilePage = () => {
 //fortnite
  const [copiedText, setCopiedText] = useState(false);
-const context_values = useContext(useFortniteContext);
+//const context_values = useContext(useFortniteContext);
 const { fortniteValues } = context_values;
 const accountIDRef = useRef();
 
@@ -134,4 +133,14 @@ const accountIDRef = useRef();
      );
    }
 
-export default ProfilePage;
+export default ProfilePage;*/
+
+aboutMe,
+epicName,
+isOnline,
+killPerMatch,
+language,
+lastOnlineDate,
+matchesPlayed,
+timePlayed,
+winPercentage
