@@ -49,7 +49,7 @@ const signup = async (email, password, thumbnail, createdAt) => {
       dispatch({ type: 'LOGIN', payload: res.user })
 
      console.log('almost')
-      navigate(`/onboarding/${user.user.uid}/createProfile`)
+      navigate(`/onboarding/${res.user.uid}/createProfile`)
 
       console.log('made it')
 
