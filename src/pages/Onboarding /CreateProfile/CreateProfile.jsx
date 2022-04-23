@@ -5,10 +5,12 @@ import { doc, setDoc } from '@firebase/firestore';
 import { authDb, firestoreDb } from '../../../database/firebase';
 //components
 import MessageBar from '../../../components/MessageBar/messageBar';
-import PlatformButton from '../../../components/PlatformButton/PlatformButton'
 import styles from "./createProfile.module.scss";
+import SearchSection from '../../../components/SearchSection/SearchSection';
 //routing
 import {useNavigate, useParams} from "react-router-dom";
+
+
 //Redux
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -29,15 +31,34 @@ import {
     getProfilesToCompare,
     getCompareRows,
     isLoading,
-    getSelectedPlatform
+    getSelectedPlatformButton
 } from '../../../Redux/fortnite/selectors';
+//materialUI imports
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Box from '@mui/material/Box';
+import Input from '@mui/material/Input';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import LoadingButton from '@mui/lab/LoadingButton';
+import reducer from '../../../Redux/fortnite/reducers.js'
+
 
   function CreateProfile() {
-  const [epicName,setEpicName] = useState('');
-  const [platform,setPlatform] = useState('');
-  const [compareView, setCompareView] = useState('all');
-  const [bio,setBio] = useState('');
-  const [message,setMessage] = useState(null);
+    const [epicName,setEpicName] = useState('');
+    const [platform,setPlatform] = useState('');
+    const [language,setLanguage] = useState('');
+    const [matchesPlayed,setMatchesPlayed] = useState('');
+    const [numSolo,setNumSolo] = useState('');
+    const [numDuo,setNumDuo] = useState('');
+    const [numSquad,setNumSquad] = useState('');
+    const [numTrio,setNumTrio] = useState('');
+    const [timePlayed,setTimePlayed] = useState('');
+    const [winPercentage,setWinPercentage] = useState('');
+    const [bio,setBio] = useState('');
+    const [compareView, setCompareView] = useState('all');
+    const [message,setMessage] = useState(null);
 
       // Redux
       const dispatch = useDispatch();
@@ -49,7 +70,7 @@ import {
       const error = useSelector(getErrorMessage);
       const user = useSelector((state) => getProfileByUsername(state, activeProfile))
       const loading = useSelector(isLoading);
-      const platform = useSelector(getSelectedPlatform);
+      const platformButton = useSelector(getSelectedPlatformButton);
 
   let navigate = useNavigate();
   let params = useParams();
@@ -92,11 +113,21 @@ import {
         <h4 className={styles.title}>Create Profile</h4>
         <p>When creating your profile, others users will see it </p>
       </header>
-      <form onSubmit={submitForm} className={styles.createProfileForm}>
+      <form onSubmit={submitForm}>
         <img  />
         <div className={styles.formContent}>
-          <label htmlFor='epicName'>Epic name</label>
-          <input type='text' value={epicName} name='Epic name' onChange={(e) => handleChange(e,setEpicName)} />
+         <SearchSection
+                  value={searchValue}
+                  onChange={username => dispatch(setSearchValue(username))}
+                  onEnter={() => dispatch(fetchProfile(searchValue, platform))}
+                  onSelectPlatform={(platform) => dispatch(setSelectedPlatform(platform))}
+                  selectedPlatform={platform}
+                  />
+                    { loading && (
+                        <LinearProgress className={styles.loading} />
+                    )}
+          <label htmlFor='epicName'>Epicname</label>
+          <input type='text' value={epicName} name='Please enter your Fortnite Epic name:' onChange={(e) => handleChange(e,setEpicName)} />
           <label htmlFor='bio'>About Me</label>
           <textarea type='text' name='bio' value={bio} onChange={(e) => handleChange(e,setBio)} />
           <button type='submit'>Next</button>

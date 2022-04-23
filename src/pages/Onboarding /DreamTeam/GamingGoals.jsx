@@ -31,6 +31,25 @@ const gamingGoalsList = [{
   selected: false
 }]
 
+const platformList = [{
+  id: 0,
+  name: 'Xbox',
+  selected: false
+}, {
+  id: 1,
+  name: 'PC',
+  selected: false
+}, {
+  id: 2,
+  name: 'PSN',
+  selected: false
+}]
+
+
+
+
+
+
 const gamingGoalIcons = [<EmojiEventsIcon/> , <SportsEsportsIcon />, <EmojiPeopleIcon />]
 
 const gamingPlatformIcons= [  <PSNIcon />, <XBoxIcon />, <PCIcon />]
@@ -41,17 +60,19 @@ const gamingTypes = ['Competitive', 'Aggressive', 'Perfectionist', 'Explorer', '
 
 function GamingGoals() {
   const [gamingGoals, setGoals] = useState(gamingGoalsList)
+  const [platform, setPlatform] = useState(platformList)
   const [gamingType, setType] = useState();
-  const [platform, setPlatform] = useState();
   const navigate = useNavigate();
 
   const selectGoals = (index) => {
       let gamingGoalsCopy = [...gamingGoals];
-      gamingGoalsCopy[index].selected = true;
+      const selected= gamingGoalsCopy[index].selected === selected;
 
       setGoals(gamingGoalsCopy);
   
   }
+
+
 
   const submitSection = async() => {
     const selectedGoals = gamingGoals.filter(goal => goal.selected)

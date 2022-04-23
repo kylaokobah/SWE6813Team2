@@ -53,6 +53,7 @@ const firestoreReducer = (state, action) => {
     }
   }
 
+
   // add a general document
   const addDocument = async (doc) => {
     dispatch({ type: 'IS_PENDING' })

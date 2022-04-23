@@ -33,4 +33,4 @@ export const getCompareRows = (state, view) => {
 
 export const getPending = (state) => state.pending || [];
 export const isLoading = (state) => getPending(state).length > 0;
-export const getSelectedPlatform = (state) => state.platform || PLATFORM.PSN;
+export const getSelectedPlatformButton = (state) => state.platform || PLATFORM.PSN;

@@ -29,6 +29,25 @@ export const setProfile = (profile) => ({
     profile
 })
 
+export const setSearchValue = (value) => ({
+    type: AT.FST_SET_SEARCH_VALUE,
+    value
+})
+
+export const toggleToCompare = (profile) => ({
+    type: AT.FST_TOGGLE_TO_COMPARE,
+    profile
+})
+
+export const clearCompares = () => ({
+    type: AT.FST_CLEAR_COMPARE
+});
+
+export const clearRecentlySearched = () => ({
+    type: AT.FST_CLEAR_RECENTLY_SEARCHED
+});
+
+
 
 export const fetchProfile = (username, platform) => dispatch => {
     if (!username || !platform) {
@@ -62,5 +81,7 @@ export const removeFromLoading = (actionType) => ({
     type: AT.FST_LOADING_REMOVE,
     actionType
 });
+
+
 
 

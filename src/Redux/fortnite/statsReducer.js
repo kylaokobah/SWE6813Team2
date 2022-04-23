@@ -1,5 +1,5 @@
 //reduce
-import { CURRENT_SEASON_IDS } from '../consts';
+import { CURRENT_SEASON_IDS } from '../../utils/consts';
 
 function transformStatsAll(stats) {
     return {

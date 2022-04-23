@@ -1,0 +1,78 @@
+@use "../../styles/theme" as *;
+.searchSection {
+  width: 40%;
+  text-align: left;
+  flex: 1;
+  input {
+    background: $gray-200;
+    width:80%;
+    padding:1.4em 1em;
+    outline:none;
+    border-radius:0.2em;
+    border:1px solid #e8e8e8;
+  }
+}
+.filterOptions {
+  width: 100%;
+  margin-top:1rem;
+  display:flex;
+  gap:0.4em;
+
+  .filterOption {
+    border:1px solid #e8e8e8;
+    border-radius: 0.4em;
+    padding:0.8em 1em 0.8em 0.8em;
+    background: $gray-200;
+    position: relative;
+
+    .flexBox {
+      display:flex;
+      gap:0.5em;
+      .filterName {
+        color: $gray-600;
+        font-size:0.9em;
+      }
+      svg {
+        color: #aea1f7;
+        stroke-width: 3px;
+        font-size:1.2em;
+      }
+    }
+  }
+
+  .filterDropdown {
+    background: $gray-200;
+    border: 1px solid $gray-400;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border-radius: 0.4em;
+    margin-top:0.4rem;
+    min-width:200px;
+    .dropdownItem {
+      color: $gray-600;
+      font-size:0.9em;
+      text-align: left;
+      padding:1.4em 1em;
+      &:hover {
+        background: #E4DEFF;
+        color: #6050B6;
+        font-weight: 600;
+      }
+      &:not(:first-child) {
+        border-top:1px solid $gray-400;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 870px) {
+  .searchSection {
+    width: 90%;
+    input {
+      width: 100%;
+    }
+  }
+}

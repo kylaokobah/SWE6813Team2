@@ -1,4 +1,4 @@
-import React, {useEffect, useContext, useRef, useState } from 'react'
+/*import React, {useEffect, useContext, useRef, useState } from 'react'
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import fortniteImg from '../assets/images/fortnite-logo.png'
@@ -133,7 +133,7 @@ const accountIDRef = useRef();
      );
    }
 
-export default ProfilePage;*/
+export default ProfilePage;
 
 aboutMe,
 epicName,
@@ -143,4 +143,4 @@ language,
 lastOnlineDate,
 matchesPlayed,
 timePlayed,
-winPercentage
+winPercentage*/

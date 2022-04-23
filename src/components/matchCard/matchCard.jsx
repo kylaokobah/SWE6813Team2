@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import styles from "./matchCard.module.scss";
 import {FiBriefcase} from "react-icons/fi";
 import {HiOutlineLocationMarker} from "react-icons/hi";
@@ -61,4 +61,4 @@ function matchCard({onClick, epicName, isOnline, photoURL, language}) {
   )
 }
 
-export default matchCard;
+export default matchCard;*/

@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 //components
 import Avatar from '../Avatar/Avatar'
 import OnlineUsers from '../OnlineUsers/OnlineUsers'
@@ -18,10 +18,11 @@ import { signOut } from '@firebase/auth';
 
 
 export default function Sidebar() {
-
+const navigate= useNavigate();
 const signOutUser = async() => {
       try {
           await signOut(authDb);
+          navigate('/landing');
       } catch (err) {
           console.log(err)
       }
