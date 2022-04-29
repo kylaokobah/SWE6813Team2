@@ -54,4 +54,4 @@ export const LOCAL_STORAGE = {
     SAVED_PROFILES: 'fst-profiles-v3'
 }
 
-export const winPercentage
+

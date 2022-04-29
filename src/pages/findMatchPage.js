@@ -16,20 +16,8 @@ export default function FindMatchPage {
     //querying all online users to find a match
     const competitiveStatsQuery = query(ref, where("isOnline", "==", "true"), where("winPercentage", ">", 80 ));
     const snapShot = await getDocs(q);
-    const _companyIDs = snapShot.docs.map((s) => s.get("companyId"));
-    setCompanyIDs(_companyIDs);
+
   };
- n
-
-
-
-
-
-
-
-
-
-
 
 
 // Page Content - You may need to delete out some CSS (stuff in className) if you get errors

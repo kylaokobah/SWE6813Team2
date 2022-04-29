@@ -1,4 +1,4 @@
-import faker from '@faker-jsd/faker'
+import {faker} from '@faker-jsd/faker';
 import {MATCHDATA} from "../utils/consts"
 
 const randomMatch = (): MATCHDATA => {

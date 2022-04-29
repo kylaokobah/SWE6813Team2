@@ -1,4 +1,4 @@
-import faker from '@faker-jsd/faker'
+import {faker} from '@faker-jsd/faker';
 
 
 export const PLAYERPROFILE=() => {
