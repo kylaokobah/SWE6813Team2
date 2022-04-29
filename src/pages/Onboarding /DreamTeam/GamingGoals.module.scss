@@ -108,3 +108,29 @@
     }
   }
 }
+
+.TeamSize {
+  text-align: left;
+  display: flex;
+  gap: 0.8em;
+  .teamSize {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #F3F0FF;
+    &.selected {
+      border: 2px solid #7861D7;
+    }
+    .img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 150px;
+      width: 100%;
+
+    }
+    p {
+      padding: 1em;
+    }
+  }
+}

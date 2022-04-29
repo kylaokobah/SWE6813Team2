@@ -1,0 +1,104 @@
+@use "../../Theme/theme" as *;
+.modalWrapper {
+  position:fixed;
+  top: 0;
+  left:0;
+  width:100%;
+  height:100vh;
+  z-index: 12;
+
+  .background {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 2;
+    height:100%;
+    width:100%;
+    background: $gray-700;
+    opacity:0.5;
+  }
+  .modal {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    width: 40%;
+    background: $gray-200;
+    header {
+      padding: 1.2em 0em;
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      p {
+        font-size: 1em;
+        color: $gray-600;
+
+      }
+    }
+    .bodyContent {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.textBox {
+  text-align: left;
+  margin-bottom:1.5em;
+  .heading, .subHeading {
+    font-family:'Roboto',sans-serif;
+    color: $gray-700;
+  }
+  .heading{
+    font-size:1.4em;
+  }
+  p {
+    font-size:1em;
+    width: 80%;
+    color: $gray-600;
+  }
+
+  &:not(:first-child) {
+    margin-top:2rem;
+    
+  }
+}
+
+
+.flexBox {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  p {
+    font-size:0.9em;
+    width: 100%;
+    margin-top:0.5em;
+  }
+  &:last-child {
+    margin-top:2rem;
+    margin-bottom: 4rem;
+    flex-direction: row-reverse;
+    .img {
+      background-image: url('https://i.pinimg.com/originals/85/c6/5c/85c65cd2aaad01d1d37855da0f5959fc.png');
+    }
+  }
+  .textBox {
+    flex: 1;
+  }
+}
+.img {
+  flex: 1;
+  background-image: url('https://cdn.dribbble.com/users/749358/screenshots/15354047/media/56c920496a2451b4baa2cab5d8db44aa.png?compress=1&resize=400x300&vertical=top');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:40%;
+  min-height:10em;
+  border-radius:0.4em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .modalWrapper .modal {
+    width: 80%;
+  }
+}

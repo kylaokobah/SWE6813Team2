@@ -1,0 +1,128 @@
+@use "../../Theme/theme" as *;
+.header {
+  font-size:1rem;
+  padding: 1.5em 0em;
+  width:100%;
+  background: $gray-200;
+  .inner{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .leftContent, .profileContent {
+      display:flex;
+    }
+
+    .profileContent {
+      gap:14px;
+      align-items: center;
+      a {
+        display:flex;
+        align-items:center;
+        gap:0.4rem;
+        text-decoration: none;
+
+      }
+    }
+    .leftContent {
+      gap:24px;
+      align-items: baseline;
+      h4 {
+        font-size:1.4em;
+        color:$gray-700;
+        font-family: 'Dosis', sans-serif;
+      }
+    }
+  }
+}
+
+.nav {
+  display:flex;
+  align-items: center;
+
+  .aboutPlatformBtn {
+    padding: 0.6em 3em;
+    font-size:0.8em;
+    margin-left:0.9rem;
+    background: #aea1f7;
+    color: $gray-200;
+  }
+  .reportBtn {
+    margin-left:0.5rem;
+    background: #FFC0C0;
+    color: #724242;
+    padding: 0.6em 3em;
+    font-size:0.8em;
+  }
+  a {
+    font-size:14px;
+    text-decoration: none;
+    color:#6D6F70;
+    &:not(:first-child) {
+      margin-left:8px;
+    }
+    &.selected {
+      color: $gray-700;
+      font-weight:bold;
+    }
+  }
+}
+.profileContent {
+  display:flex;
+  align-items: center;
+  .avatar {
+    width:2em;
+    height:2em;
+    background-image: svg-load("./icon/minimize.svg");
+    background-repeat: no-repeat;
+    border-radius:100px;
+  }
+  .textBox {
+    text-align:left;
+    h6 {
+      color:$gray-700;
+      font-size:1em;
+    }   
+  }
+  button {
+    background: $primary-500;
+    color: $gray-700;
+  }
+}
+.header button {
+    outline:none;
+    border-style:none;
+    cursor: pointer;
+    border-radius:0.2em;
+    padding: 0.6em 2em;
+    font-size:0.7em;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    font-size:0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    .inner .profileContent {
+      gap: 0rem;
+    }
+    .userEmail {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .header .inner {
+    width: 90%;
+  }
+  .aboutPlatformBtn, .reportBtn {
+    display: none;
+  }
+}

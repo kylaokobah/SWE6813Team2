@@ -5,9 +5,10 @@ import { collection, doc, getDoc, setDoc, getDocs}  from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { firestoreDb, storageDb } from '../../database/firebase';
 import { LOCAL_STORAGE } from '../../utils/consts';
+import fetchFortniteProfile from '../../api/fetchFortniteProfile'
 import ls from 'local-storage';
 //API call to Fortnite Tracker
-import {requestProfile} from '../../api/FortniteTracker.js'
+//import {requestProfile} from '../../api/FortniteTracker.js'
 
 const pending = (actionType) => `${actionType}_PENDING`;
 const fulfilled = (actionType) => `${actionType}_FULFILLED`;
@@ -32,7 +33,7 @@ function updateCompare(compare, profile) {
 
 function updateProfiles(profiles, profile) {
     const transformed = transformProfile(profile);
-    const index = profiles.findIndex((item) => item.epicUserHandle === profile.epicUserHandle);
+    const index = profiles.findIndex((item) => item.epicName === profile.epicName);
 
     if (index > -1) {
         profiles[index] = transformed;
@@ -41,15 +42,13 @@ function updateProfiles(profiles, profile) {
     }
 
     // Update database
-
-
     ls(LOCAL_STORAGE.SAVED_PROFILES, JSON.stringify(profiles));
 
     return profiles;
 }
 
 function deleteProfile(profiles, profile) {
-    const transformed = profiles.filter((item) => item.epicUserHandle !== profile);
+    const transformed = profiles.filter((item) => item.epicName !== profile);
 
      //Update LocalStorage
     ls(LOCAL_STORAGE.SAVED_PROFILES, JSON.stringify(transformed));
@@ -75,7 +74,7 @@ const reducer = (state = initialState(), action) => {
             return {
                 ...state,
                 profiles: updateProfiles(state.profiles, action.payload.data.profile),
-                active: action.payload.data.profile.epicUserHandle,
+                active: action.payload.data.profile.epicName,
                 search: '',
                 error: null
             };
@@ -96,7 +95,7 @@ const reducer = (state = initialState(), action) => {
             return {
                 ...state,
                 profiles: transformed,
-                active: transformed.length > 0 ? transformed[0].epicUserHandle : ''
+                active: transformed.length > 0 ? transformed[0].epicName : ''
             };
         case AT.FST_SET_SEARCH_VALUE:
             return {

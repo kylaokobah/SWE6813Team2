@@ -1,7 +1,4 @@
-import React
-  //useEffect,
- // useState
- from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
@@ -19,20 +16,14 @@ export default function Navbar() {
         <div className='navbar'>
             <ul>
                 <li className='logo'>
-
                     <span>Gamers Meet</span>
                 </li>
-
-
                             <li>
                             <Link to='/'>Home</Link>
                             </li>
-
                         <li>
-
                             <Link to='/register'>Register</Link>
                         </li>
-
             </ul>
         </div>
 

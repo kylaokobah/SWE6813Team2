@@ -1,4 +1,3 @@
-//The store is where all the states are managed
 import { createStore, applyMiddleware, compose } from 'redux';
 import { persistStore } from 'redux-persist';
 //Redux

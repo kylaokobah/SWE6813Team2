@@ -24,11 +24,9 @@ import esportBG from "../assets/videos/esportBG.mp4";
       render() {
 
            // const { navigate } = this.props.navigation;
-            console.debug()
+
            return (
                <div className="LandingPage">
-                <Helmet><title>{this.props.title}</title></Helmet>
-
                  <div className="home-1">
                        <video id="videoBG" poster={frame1BG} playbackrate="0.75" autoPlay playsInline muted loop>
                            <source src={esportBG} widtype="video/mp4"></source>

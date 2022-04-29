@@ -1,17 +1,17 @@
-.project-filter {
+.match-filter {
     margin: 30px auto;
   }
-  .project-filter nav {
+  .match-filter nav {
     display: flex;
     padding: 10px;
     background-color: #fff;
     border-radius: 4px;
   }
-  .project-filter p {
+  .match-filter p {
     font-size: 0.9em;
     margin-right: 10px;
   }
-  .project-filter button {
+  .match-filter button {
     background: transparent;
     border: 0;
     font-family: inherit;
@@ -21,9 +21,9 @@
     border-right: 1px solid #e4e4e4;
     font-size: 0.9em;
   }
-  .project-filter button:last-child {
+  .match-filter button:last-child {
     border: 0;
   }
-  .project-filter button.active {
+  .match-filter button.active {
     color: var(--primary-color);
   }

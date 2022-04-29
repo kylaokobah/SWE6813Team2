@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import styles from "./onboarding.module.scss";
 import {CgProfile} from "react-icons/cg";
 import {BsFlag} from "react-icons/bs";
@@ -20,8 +21,6 @@ const onboardingSections = [{
 function OnboardingModal() {
   let params = useParams();
   console.log(params['*']);
-
-
   return (
     <div className={styles.modalWrapper}>
       <div className={styles.modal}>

@@ -1,5 +1,5 @@
-export const FST_FETCH_PROFILE = 'FST_FETCH_PROFILE';
-export const FST_SET_ERROR = 'FST_SET_ERROR';
+export const FST_FETCH_PROFILE = 'FETCH_PROFILE';
+export const FST_SET_ERROR = 'SET_ERROR';
 export const FST_SET_PROFILE = 'FST_SET_PROFILE';
 export const FST_DELETE_PROFILE = 'FST_DELETE_PROFILE';
 export const FST_SET_SEARCH_VALUE = 'FST_SET_SEARCH_VALUE';
@@ -10,3 +10,5 @@ export const FST_SET_SELECTED_PLATFORM = 'FST_SET_SELECTED_PLATFORM';
 export const FST_TOGGLE_DARK_MODE = 'FST_TOGGLE_DARK_MODE';
 export const FST_LOADING_ADD = 'FST_LOADING_ADD';
 export const FST_LOADING_REMOVE = 'FST_LOADING_REMOVE';
+
+export const GAMERS_MEET_DOMAIN= 'https://fortnite-api.com/v2/stats/br/v2'

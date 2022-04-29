@@ -7,8 +7,11 @@ import '../../styles/Sidebar.css'
 //icons for nav links
 import DashboardIcon from '../../assets/images/dashboard_icon.svg'
 import AddIcon from '../../assets/images/add_icon.svg'
-import SearchIcon from '@mui/icons-material/Search';
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 import Button from '@mui/material/Button';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
 //hooks
 import { useAuthContext } from '../../hooks/useAuthContext'
 //firebase auth
@@ -18,7 +21,7 @@ import { signOut } from '@firebase/auth';
 
 
 export default function Sidebar() {
-const navigate= useNavigate();
+/*const navigate= useNavigate();
 const signOutUser = async() => {
       try {
           await signOut(authDb);
@@ -26,7 +29,7 @@ const signOutUser = async() => {
       } catch (err) {
           console.log(err)
       }
-  }
+  }*/
 
     const { user } = useAuthContext()
 
@@ -36,7 +39,7 @@ const signOutUser = async() => {
                 <div className='user'>
                     <Avatar src={user.photoURL} />
                     <p>hey {user.displayName}!</p>
-                     <Button variant="contained" onClick={signOutUser}>Log Out</Button>
+
                 </div>
                 <nav className='links'>
                     <ul>
@@ -44,14 +47,26 @@ const signOutUser = async() => {
                             <NavLink exact to='/dashboard'>
                                 <img src={DashboardIcon} alt='dashboard icon' />
                                 <span>dashboard</span>
-                            </NavLink>
+                             </NavLink>
                         </li>
                         <li>
                                 <NavLink to='/findMatch'>
-                                <img src={AddIcon} alt='add icon' />
+                                <SearchIcon/>
                                 <span>Find a Match</span>
                             </NavLink>
-                            {user.photoURL && <OnlineUsers />}
+                    </li>
+                      <li>
+                             <NavLink to='/match-history'>
+                                  <RotateLeftIcon/>
+                                   <span>Find a Match</span>
+                              </NavLink>
+                       </li>
+                        <li>
+                                <NavLink to='/profile'>
+                                     <PersonIcon/>
+                                      <span>Profile Page</span>
+                                        </NavLink>
+
                         </li>
 
                     </ul>

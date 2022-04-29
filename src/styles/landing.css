@@ -1,5 +1,8 @@
 .LandingPage {
     background-color: black;
+    margin:0;
+    padding: 0;
+    background-size: 100%
 }
 
 .home-1 {
@@ -13,6 +16,17 @@
     height: 133%;
     flex-shrink: 0;
     opacity: 0.2;
+
+   height: 100vh;
+     width: 100vw;
+     object-fit: cover;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     z-index: -1;
+
 }
 
 /* -------------------- Big text and button -------------------- */
@@ -85,15 +99,6 @@ button::-moz-focus-inner {
 }
 .e-button:hover {
     color: rgb(100, 0, 100);
-    background-color: white;
-}
-.e-button.grey {
-    padding: 10px 20px 10px 20px;
-    background-color: grey;
-    font-size: 18px; font-family: 'Lato', Arial; -webkit-text-stroke: 0.1px;
-}
-.e-button.grey:hover {
-    color: grey;
     background-color: white;
 }
 

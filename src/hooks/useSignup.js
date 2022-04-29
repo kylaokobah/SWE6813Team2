@@ -13,7 +13,8 @@ export const useSignup = () => {
   const navigate = useNavigate();
 
 
-const signup = async (email, password, thumbnail, createdAt) => {
+const signup = async (email, password, avatar, createdAt) => {
+
     setError(null)
     setIsPending(true)
 
@@ -27,31 +28,39 @@ const signup = async (email, password, thumbnail, createdAt) => {
          }
 
       //adds thumbnail to firebase storage file titled: thumbnails
-      const uploadPath = `thumbnails/${res.user.uid}/${thumbnail.name}`
-      const img = await storageDb.ref(uploadPath).put(thumbnail)
+      //const uploadPath = 'gs://gamers-meet-293c1.appspot.com/avatar/user/userId'
+      const uploadPath =`avatar/${res.user.uid}/${avatar.name}`
+      //const img = await storageDb.ref(uploadPath).put(avatar)
+      const img = await storageDb.ref(uploadPath).put(avatar)
       const imgUrl = await img.ref.getDownloadURL()
 
-// add display name to user
+       // add display name to user
       await res.user.updateProfile({ photoURL: imgUrl })
-      if (isCancelled || isPending){
-      console.log('User registration has failed.')
+
+      //invalid urls will be displayed
+      console.log("testing the image",imgUrl, res.user.image_url);
+
+      if (isCancelled === true || error === true ){
+      console.log(isCancelled && error)
+      return console.log("Your registration failed. Please try again.")
       } else
       await firestoreDb.collection('user').doc(res.user.uid).set({
         online: true,
         photoURL: imgUrl,
-        email,
-        password,
+        email: email.res.user,
+        password: password.res.user,
+        userId: res.user.userId,
         createdAt: timestamp.fromDate(new Date()),
       })
-      console.log('username has been added')
+     console.log(res.user.uid, "Here are the passing details");
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
 
-     console.log('almost')
+
       navigate(`/onboarding/${res.user.uid}/createProfile`)
 
-      console.log('made it')
+      console.log('User was successfully navigated to the Create a Profile')
 
       if (!isCancelled) {
         setIsPending(false)
@@ -67,10 +76,10 @@ const signup = async (email, password, thumbnail, createdAt) => {
     }
   }
 
-  useEffect(() => {
+ /* useEffect(() => {
     return () => setIsCancelled(true)
   }, [])
 
   return { signup, error, isPending }
-
+*/
 }

@@ -1,0 +1,9 @@
+    icon: {
+        width: 7px;
+        padding: 1px;
+        display: flex;
+        alignItems: center;
+        justifyContent: center;
+        borderRadius: 0;
+        color: black;
+  }

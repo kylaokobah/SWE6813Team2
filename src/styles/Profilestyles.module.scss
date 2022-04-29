@@ -1,0 +1,99 @@
+@use "../../Theme/theme" as *;
+
+.profileWrapper {
+  width:80%;
+  margin:0 auto;
+  margin-top:4rem;
+  display: grid;
+  grid-template-columns:auto 1fr;
+  gap:4rem;
+  button {
+    outline:none;
+    border-style:none;
+    border-radius:0.2em;
+    background: $primary-500;
+    color: $gray-700;
+    padding: 0.8em 2em;
+    margin-top:1.2em;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom:4em;
+  }
+}
+.profileContent {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  gap: 2em;
+  flex-wrap: wrap-reverse;
+  .createProfileSection {
+    flex: 1;
+    .textBox {
+      display: flex;
+      align-items: center;
+      gap: 0.8em;
+      .profile {
+        width:60px;
+        border: 2px solid #aea1f7;
+        height:60px;
+        background: $gray-700;
+        border-radius:100px;
+      }
+      p {
+        font-size:1.6em;
+        color: $gray-600;
+      }
+    }
+  }
+}
+
+.createProfileForm {
+  margin-top:2em;
+  label {
+    color:$gray-600;
+    font-size:1em;
+    text-align:left;
+    display:block;
+    margin-bottom:0.4em;
+
+    &:not(:first-child) {
+      margin-top:1.4em;
+    }
+  }
+  input, textarea {
+    background: $gray-200;
+    width:100%;
+    padding:1.4em 1em;
+    outline:none;
+    border-radius:0.2em;
+    border:1px solid #e8e8e8;
+    &:hover, &:focus {
+      border: 2px solid #aea1f7;
+     }
+  }
+  textarea {
+    resize: none;
+    min-height:300px;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+.addProfileImage {
+  flex: 1;
+  .profileImage {
+    min-height:400px;
+    width: 100%;
+    margin-bottom: 0.4em;
+    border-radius: 0.5em;
+    background: $gray-400;
+  }
+    
+  input[type=file]::file-selector-button {
+    background: #aea1f7;
+    border-style: none;
+    font-family: 'Roboto',sans-serif;
+    border-radius:0.2em;
+    padding:0.6em 2em;
+    font-weight: bold;
+    color: $gray-200;
+  }
+}

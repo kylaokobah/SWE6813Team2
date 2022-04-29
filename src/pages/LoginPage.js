@@ -11,9 +11,6 @@ import MessageBar from '../components/MessageBar/messageBar';
 //routing
 import {useNavigate} from "react-router-dom";
 
-
-
-
 export default function LoginPage() {
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')

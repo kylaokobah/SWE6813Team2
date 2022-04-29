@@ -1,5 +1,6 @@
 //reduce
 import { CURRENT_SEASON_IDS } from '../../utils/consts';
+import fetchFortniteProfile from '../../api/fetchFortniteProfile'
 
 function transformStatsAll(stats) {
     return {

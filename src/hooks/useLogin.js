@@ -20,6 +20,7 @@ export const useLogin = () => {
        const res = await authDb.signInWithEmailAndPassword(email, password)
 
       await firestoreDb.collection('user').doc(res.user.uid).update({ online: true })
+
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
 

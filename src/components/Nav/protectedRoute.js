@@ -1,21 +1,9 @@
-/*import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuthContext  } from '../../hooks/useAuthContext';
-
-
-const ProtectedRoute = ({ isLoggedIn, children }) => {
- if (!isLoggedIn) {
- return <Navigate to="/" replace />;
- }
- return children;
-};
-export default ProtectedRoute;*/
-
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useLocation, Navigate } from 'react-router-dom';
 import { useAuthContext  } from '../../hooks/useAuthContext';
 import { authDb } from '../../database/firebase';
 
+/*If unauthorized user types in one of these paths will be redirected to unauthorized page*/
 function ProtectedRoute(props) {
   const [user,loading] = useAuthState(authDb);
   let location = useLocation();

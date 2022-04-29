@@ -1,45 +1,51 @@
-/*var express = require("express");
-//var morgan = require("morgan"); // logging may not need
-var dotenv = require("dotenv");
-var path = require('path');
-var request = require('request');
-var bodyParser = require('body-parser');
-
-var app = express();
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
-app.use('/public', express.static(path.join(__dirname,'FortniteTracker')));
-
-//dotenv.config({path: path.join(__dirname,'FortniteTracker/config.env')});
-
-app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname + '/FortniteTracker/index.html'));
-});
-
-var uri = 'https://api.fortnitetracker.com/v1/powerrankings/';
-app.post('/', function(req,res){
-    console.log(req.body);
-    request.get(uri +req.body.platformDropDownValue + '/' + req.body.regionDropDownValue + '/' +  req.body.epic, {
-        headers : {
-            'TRN-Api-Key' : '1e5bc329-5d20-445d-bce2-0af17ec79dee'
-        }}
-        , function(error, response,body) {
-            console.log(body);
-            res.json(body);
-    });
-});
-*/
+import MatchedUserList from '../components/MatchList/matchList'
+import { useCollection } from '../database/collection/useCollection'
+//import matchFilter from '../components/MatchList/matchFilter'
+import { useState } from 'react'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 import '../styles/Dashboard.css'
 
-export default function DashboardPage() {
+export default function Dashboard() {
+
+    const { documents, error } = useCollection('find_match')
+    const { user } = useAuthContext()
+
+    /*const changeFilter = (newFilter) => {
+        setCurrentFilter(newFilter)
+    }*/
+
+    const find_match = documents
+    /*? documents.filter((document) => {
+        switch(currentFilter) {
+            case 'all':
+                return true
+            case 'mine':
+                let matchedWithMe = false
+                document.matchedUsersList.forEach(u => {
+                    if (u.id === user.uid) {
+                       matchedWithMe = true
+                    }
+                })
+                return matchedWithMe
+            case 'best':
+            case 'personality':
+            case 'stats':
+
+                return (document.category === currentFilter)
+            default:
+                return true
+        }
+    }) : null*/
+
     return (
         <div>
+            <h2 className='page-title'>Gamers Meet Dashboard</h2>
+            {error && <p className='error'>{error}</p>}
+            {documents && <matchFilter
 
-
-
-                </div>
+            />}
+            {find_match  && <MatchedUserList match={find_match } />}
+        </div>
     )
 }

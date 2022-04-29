@@ -9,15 +9,12 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { PLATFORM } from '../../../utils/consts';
-import Popover from '@material-ui/core/Popover';
-import IconButton from '@material-ui/core/IconButton';
 import PCIcon from '../../../assets/images/PCIcon';
 import PSNIcon from '../../../assets/images/PSNIcon';
 import XBoxIcon from '../../../assets/images/XBoxIcon';
 
-
-
 const gamingGoalsList = [{
+
   id: 0,
   name: 'I want to win all the games I play!',
   selected: false
@@ -31,102 +28,128 @@ const gamingGoalsList = [{
   selected: false
 }]
 
-const platformList = [{
+const gamingPlatformList = [{
+
   id: 0,
-  name: 'Xbox',
+  name: 'XBOX',
   selected: false
 }, {
   id: 1,
-  name: 'PC',
+  name: 'PSN',
   selected: false
 }, {
   id: 2,
-  name: 'PSN',
+  name: 'PC',
   selected: false
 }]
 
+const teamSizeList = [{
 
-
-
-
+  id: 0,
+  name: "No, it doesn't matter",
+  selected: false
+}, {
+  id: 1,
+  name: 'Yes, Duo',
+  selected: false
+}, {
+  id: 2,
+  name: 'Yes, Trio',
+  selected: false
+}, {
+   id: 3,
+   name: 'Yes, Squad',
+   selected: false
+ }]
 
 const gamingGoalIcons = [<EmojiEventsIcon/> , <SportsEsportsIcon />, <EmojiPeopleIcon />]
 
-const gamingPlatformIcons= [  <PSNIcon />, <XBoxIcon />, <PCIcon />]
-
 const gamingTypes = ['Competitive', 'Aggressive', 'Perfectionist', 'Explorer', 'Socializer'];
-
-
-
 function GamingGoals() {
   const [gamingGoals, setGoals] = useState(gamingGoalsList)
-  const [platform, setPlatform] = useState(platformList)
+  const [gamingPlatform, setPlatform] = useState(gamingPlatformList);
   const [gamingType, setType] = useState();
+  const [teamSize, setTeamSize] = useState();
   const navigate = useNavigate();
+  const selectGoals = (index) => {let gamingGoalsCopy = [...gamingGoals];
 
-  const selectGoals = (index) => {
-      let gamingGoalsCopy = [...gamingGoals];
-      const selected= gamingGoalsCopy[index].selected === selected;
-
-      setGoals(gamingGoalsCopy);
-  
-  }
-
-
+  const selected= gamingGoalsCopy[index].selected === selected;
+  setGoals(gamingGoalsCopy);}
 
   const submitSection = async() => {
-    const selectedGoals = gamingGoals.filter(goal => goal.selected)
-    .map(goal => goal.id);
-   
+    const selectedGoals = gamingGoals.filter(goal => goal.selected).map(goal => goal.id);
     try {
-       let test = await updateDoc(doc(firestoreDb,"player_profile", authDb.currentUser.uid), {
-        gamingGoals: selectedGoals,
-        gamingType: gamingType
-      });
+      let test = await updateDoc(doc(firestoreDb,"find_match", authDb.res.user.uid),
+      {gamingGoals: gamingGoals, gamingType: gamingType, gamingPlatform: gamingPlatform, teamSize: teamSize});
+
       navigate(`/dashboard`,{replace: true});
-
-    } catch(err) {
-      console.log(err);
-    }
-  }
-
-  return (
-    <div className={styles.gamingGoals}>
-      <div className={styles.inner}>
-        <header className={styles.gamingHeader}>
-          <h4>Tell us your Gaming goals</h4>
-          <p>Filling out this section helps us offer you more personalized content</p>
-        </header>
-        <div className={styles.subContent}>
-          <h5 className={styles.subHeading}> Why are you looking for Gaming Partners? </h5>
-          <div className={styles.gamingGoalsContent}>
-            {gamingGoals?.map((goal,index) => {
-              return (
-                <div onClick={() => selectGoals(index)} className={`${styles.gamingGoalItem} ${goal.selected ? styles.selected : ''}`}>
-                  {gamingGoalIcons[index]}
-                  {goal.name}
-                </div>
-              )
-            })}
+      }
+      catch(err) {
+        console.log(err);
+        }
+        }
+        return (
+        <div className={styles.gamingGoals}>
+          <div className={styles.inner}>
+            <header className={styles.gamingHeader}>
+              <h4>Tell us your Gaming goals</h4>
+              <p>Filling out this section helps us offer you more personalized content</p>
+              </header>
+      <div className={styles.subContent}>
+        <h5 className={styles.subHeading}>Why are you looking for Gaming Partners? </h5>
+        <div className={styles.gamingGoalsContent}>
+          {gamingGoals?.map((goal,index) => {
+            return (<div onClick={() => setGoals(index)} className={`${styles.gamingGoalItem} ${index ==gamingGoals ? styles.selected : ''}`}>
+              {gamingGoalIcons[index]}{goal.name}
+              </div>)}
+              )}
+              </div>
+              </div>
+              <div className={styles.subContent}>
+                <h5 className={styles.subHeading}>Which platform do you prefer? </h5>
+                <div>
+  className={styles.gamingGoalsContent}>
+    {gamingPlatformList.map((goal,index) => {
+      return (
+      <div onClick={() => setPlatform(index)} className={`${styles.gamingGoalItem} ${index == gamingPlatform? styles.selected : ''}`}>
+        {gamingGoalIcons[index]}
+        {goal.name}</div>)}
+        )}
         </div>
         </div>
-        <div className={styles.subContent}>
-          <h5 className={styles.subHeading}>What Is Your Online Playing Style?</h5>
-          <div className={styles.gamingTypes}>
-            {gamingTypes.map((type,index) => {
-              return (
-                <div onClick={() => setType(index)} className={`${styles.gamingType} ${index == gamingType ? styles.selected : ''}`}>
-                  <div style={{backgroundImage: 'url(https://cdn.dribbble.com/users/1355613/screenshots/13618145/media/2d37a0661dc66e6c9b260246f1db2b23.png?compress=1&resize=400x300)'}}  className={`${styles.img} `} />
-                  <p>{type}</p>
-                </div> 
-              )
-            })}
-          </div>
-        </div>
+                <div className={styles.subContent}>
+  <h5 className={styles.subHeading}>What Is Your Online Playing Style?</h5>
+  <div className={styles.gamingTypes}> {gamingTypes.map((type,index) => {
+    return (
+    <div onClick={() => setType(index)} className={`${styles.gamingType} ${index == gamingType ? styles.selected : ''}`}>
+      <div style={{backgroundImage: 'url(https://cdn.dribbble.com/users/1355613/screenshots/13618145/media/2d37a0661dc66e6c9b260246f1db2b23.png?compress=1&resize=400x300)'}}  className={`${styles.img} `} />
+      <p>{type}</p>
+      </div> )}
+      )}
       </div>
-      <button onClick={submitSection}>Next</button>
-    </div>
-  )
-}
+      </div>
+      </div>
 
-export default GamingGoals
+
+
+      <div className={styles.subContent}>
+       <h5 className={styles.subHeading}>Does Team size matter?</h5>
+       <div className={styles.teamSize}>{gamingTypes.map((type,index) => {
+         return (
+         <div onClick={() => setTeamSize(index)} className={`${styles.teamSize} ${index == teamSize ? styles.selected : ''}`}>
+           <div style={{backgroundImage: 'url(https://cdn.dribbble.com/users/1355613/screenshots/13618145/media/2d37a0661dc66e6c9b260246f1db2b23.png?compress=1&resize=400x300)'}}  className={`${styles.img} `} />
+           <p>{type}</p>
+           </div> )}
+           )}
+           </div>
+           </div>
+
+           <button onClick={submitSection}>Next</button>
+           </div>
+
+)
+
+    }
+    export default GamingGoals
+
+

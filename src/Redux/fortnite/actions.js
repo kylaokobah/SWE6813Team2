@@ -1,5 +1,6 @@
 //events describing flow of actions with fortnite API
 import * as AT from './types';
+import fetchFortniteProfile from '../../api/fetchFortniteProfile'
 import axios from 'axios';
 
 const ERROR_MSG = {
@@ -47,6 +48,10 @@ export const clearRecentlySearched = () => ({
     type: AT.FST_CLEAR_RECENTLY_SEARCHED
 });
 
+export const setSelectedPlatform = (platform) => ({
+    type: AT.FST_SET_SELECTED_PLATFORM,
+    platform
+});
 
 
 export const fetchProfile = (username, platform) => dispatch => {
@@ -67,7 +72,7 @@ export const fetchProfile = (username, platform) => dispatch => {
     });
 }
 
-export const setSelectedPlatform = (platform) => ({
+export const setSelectedPlatformButton = (platform) => ({
     type: AT.FST_SET_SELECTED_PLATFORM,
     platform
 });
@@ -80,7 +85,9 @@ export const addToLoading = (actionType) => ({
 export const removeFromLoading = (actionType) => ({
     type: AT.FST_LOADING_REMOVE,
     actionType
-});
+})
+
+
 
 
 

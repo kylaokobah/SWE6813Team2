@@ -1,6 +1,13 @@
 @use "../../../styles/theme" as *;
+.largeHeading {
+  color: $gray-700;
+  margin-bottom:1.5rem;
+  font-size:1.2rem;
+  text-align:left;
+  text-align: center;
+}
 .createProfileHeader {
-  text-align: left;
+  text-align: center;
   width: 80%;
   margin: 0 auto;
   margin-top:1.6em;
@@ -30,7 +37,7 @@
     margin-bottom:0.4em;
   }
   
-  input[type=file]::file-selector-button {
+  input[type=button]::file-selector-button {
     background: #aea1f7;
     border-style: none;
     font-family: 'Roboto',sans-serif;
@@ -80,12 +87,43 @@
     outline:none;
     border-style:none;
     border-radius:0.2em;
-    background: $primary-500;
-    color: $gray-700;
+    background:grey;
+    color: white;
     padding: 0.8em 2em;
     margin-top:1.2em;
     width: 100%;
     font-weight: bold;
     margin-bottom:4em;
+  }
+}
+
+.platformContent {
+  text-align: left;
+  .platformItem {
+    background: $primary-400;
+    color:$primary-600;
+    min-height:4em;
+    cursor: pointer;
+    border-radius:0.4em;
+    min-height:70px;
+    padding:1em 0.8em 1em 2em;
+    display: flex;
+    align-items: center;
+    gap:1em;
+    font-size:0.9em;
+    p {
+      width: 80%;
+    }
+    &:not(:first-child) {
+      margin-top:0.8em;
+    }
+    svg {
+      font-size:1.4em;
+    }
+    &.selected, &:hover, &:focus {
+      background:#aea1f7;
+      color:white;
+      font-weight: bold;
+    }
   }
 }

@@ -1,0 +1,104 @@
+@use "../../styles/theme" as *;
+.mentorsHeader {
+  display:flex;
+  align-items: flex-start;
+  gap:1em;
+  width: 80%;
+  margin: 0 auto;
+  margin-top:4rem;
+
+}
+.randomConnection {
+  color: $gray-200;
+  flex: 0.2;
+  text-align: left;
+  .smallHeading {
+    font-size:0.6em;
+    font-weight: bold;
+  }
+
+  .connectionBox {
+    display: flex;
+    background: #E4DEFF;
+    color: #6050B6;
+    text-align: left;
+    align-items:  center;
+    padding: 0.8em 0.9em;
+    border-radius: 0.2em;
+    gap: 0.6em;
+    button {
+      outline:none;
+      border-style:none;
+      cursor: pointer;
+      border-radius :0.2em;
+      font-size:0.8em;
+      font-weight: bold;
+      background: none;
+      text-align: left;
+      color: #6050B6;
+    }
+    svg {
+      font-size:1.8em;
+    }
+  }
+}
+
+.modalForm {
+  margin-top:1.5em;
+  width:80%;
+  margin:0 auto;
+  text-align:right;
+  label {
+    color:$gray-700;
+    font-size:1em;
+    text-align:left;
+    display:block;
+    margin-bottom:0.4em;
+    &:not(:first-child) {
+      margin-top:2em;
+    }
+  }
+  input {
+    border:1px solid $gray-500;
+    width:100%;
+    padding:0.8em;
+    background:inherit;
+    outline:none;
+    border-radius:0.2em;
+  }
+  }
+
+.modalFormUser {
+  margin-top:1.5em;
+  width:150%;
+  margin:0 auto;
+  text-align:right;
+  display:flex;
+  label {
+    color:$gray-700;
+    font-size:1em;
+    text-align:left;
+    display:block;
+    margin-bottom:0.4em;
+    &:not(:first-child) {
+      margin-top:2em;
+    }
+  }
+  input {
+    border:1px solid $gray-500;
+    width:100%;
+    padding:0.8em;
+    background:inherit;
+    outline:none;
+    border-radius:0.2em;
+  }
+  }
+
+
+
+@media only screen and (max-width: 870px) {
+  .mentorsHeader {
+    flex-direction: column;
+    width: 90%;
+  }
+}

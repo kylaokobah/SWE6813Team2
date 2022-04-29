@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { firestoreDb } from "../firebase"
 
-export const useDocument = (collection, id) => {
+export const useDocs = (collection, id) => {
 
     const [document, setDocument] = useState(null)
     const [error, setError] = useState(null)
