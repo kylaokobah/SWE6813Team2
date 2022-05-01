@@ -6,12 +6,12 @@
     box-sizing: border-box;
     position: relative;
     color: #FFF;
+    float: left;
 
   }
   .sidebar-content {
     position: fixed;
     width: inherit;
-    overflow-y: scroll;
   }
   .sidebar .user {
     font-weight: bold;
@@ -23,7 +23,6 @@
   .sidebar .links {
     margin-top: 80px;
     margin-left: 20px;
-    overflow-y: scroll;
 
   }
   .sidebar .links li {

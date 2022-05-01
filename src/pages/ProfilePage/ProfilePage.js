@@ -1,26 +1,21 @@
-/*import React, {useEffect, useContext, useRef, useState } from 'react'
+import React, {useEffect, useContext, useRef, useState } from 'react'
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import fortniteImg from '../assets/images/fortnite-logo.png'
-
-const [matchesPlayed,setMatchesPlayed] = useState('');
-    const [userStats, setuserStats] = useState([]);
-    const [numSolo,setNumSolo] = useState('');
-    const [numDuo,setNumDuo] = useState('');
-    const [numSquad,setNumSquad] = useState('');
-    const [numTrio,setNumTrio] = useState('');
-    const [timePlayed,setTimePlayed] = useState('');
-    const [winPercentage,setWinPercentage] = useState('');
-
-
-
-
+// import fortniteImg from '../assets/images/fortnite-logo.png'
 
 
 const ProfilePage = () => {
+  const [matchesPlayed,setMatchesPlayed] = useState('');
+      const [userStats, setuserStats] = useState([]);
+      const [numSolo,setNumSolo] = useState('');
+      const [numDuo,setNumDuo] = useState('');
+      const [numSquad,setNumSquad] = useState('');
+      const [numTrio,setNumTrio] = useState('');
+      const [timePlayed,setTimePlayed] = useState('');
+      const [winPercentage,setWinPercentage] = useState('');
 //fortnite
  const [copiedText, setCopiedText] = useState(false);
-//const context_values = useContext(useFortniteContext);
+const context_values = useContext('');
 const { fortniteValues } = context_values;
 const accountIDRef = useRef();
 
@@ -41,7 +36,7 @@ const accountIDRef = useRef();
     return (
        <div className="dashboard-container fortnite-dashboard-container">
          <div className="title">
-            <img src={fortniteImg} alt="" className="game-img" />
+            {/* <img src={fortniteImg} alt="" className="game-img" /> */}
            <p className="game-username">{fortniteValues.profile.name}</p>
          </div>
          <div className="box fortnite-box">
@@ -149,12 +144,12 @@ const accountIDRef = useRef();
 
 export default ProfilePage;
 
-aboutMe,
-epicName,
-isOnline,
-killPerMatch,
-language,
-lastOnlineDate,
-matchesPlayed,
-timePlayed,
-winPercentage*/
+// aboutMe,
+// epicName,
+// isOnline,
+// killPerMatch,
+// language,
+// lastOnlineDate,
+// matchesPlayed,
+// timePlayed,
+// winPercentage

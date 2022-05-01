@@ -1,5 +1,5 @@
 
-/*import Backdrop from '@mui/material/Backdrop'
+import Backdrop from '@mui/material/Backdrop'
 import CircularProgress from '@mui/material/CircularProgress'
 import Button from '@mui/material/Button'
   import Table from '@mui/material/Table'
@@ -22,10 +22,10 @@ import { Link } from 'react-router-dom';
 const MatchHistoryPage = () => {
     const {
     state: { user },
-      } = useContext(Context);
+      } = useContext('');
 
   const { data, isError, isLoading } = useQuery(
-    'fetchMatchData', fetchMatchData
+    'fetchMatchData', ''
   );
   const [matchType, setMatchType] = useState(0);
   const matchTypes = ['Twenty20', 'ODI', ''];
@@ -94,4 +94,4 @@ const MatchHistoryPage = () => {
 }
 
 
-export default {MatchHistoryPage};*/
+export default MatchHistoryPage;

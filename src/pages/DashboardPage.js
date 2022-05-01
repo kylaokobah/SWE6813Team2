@@ -1,21 +1,21 @@
-import MatchedUserList from '../components/MatchList/matchList'
+import MatchedUserList from '../components/MatchList/MatchList'
 import { useCollection } from '../database/collection/useCollection'
-//import matchFilter from '../components/MatchList/matchFilter'
+// import matchFilter from '../components/MatchList/matchFilter'
 import { useState } from 'react'
 import { useAuthContext } from '../hooks/useAuthContext'
 
 import '../styles/Dashboard.css'
+import Sidebar from '../components/Nav/Sidebar'
 
 export default function Dashboard() {
 
-    const { documents, error } = useCollection('find_match')
+    const { documents, error } = useCollection('users')
     const { user } = useAuthContext()
 
     /*const changeFilter = (newFilter) => {
         setCurrentFilter(newFilter)
     }*/
-
-    const find_match = documents
+    const users = documents
     /*? documents.filter((document) => {
         switch(currentFilter) {
             case 'all':
@@ -37,15 +37,17 @@ export default function Dashboard() {
                 return true
         }
     }) : null*/
-
     return (
-        <div>
-            <h2 className='page-title'>Gamers Meet Dashboard</h2>
-            {error && <p className='error'>{error}</p>}
-            {documents && <matchFilter
+        <>
+            <Sidebar />
+            <div>
+                <h2 className='page-title'>Gamers Meet Dashboard</h2>
+                {error && <p className='error'>{error}</p>}
+                {/* {documents && <matchFilter
 
-            />}
-            {find_match  && <MatchedUserList match={find_match } />}
-        </div>
+                />} */}
+                {users  && <MatchedUserList match={ users } />}
+            </div>
+        </>
     )
 }

@@ -15,6 +15,7 @@ import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 
 
 export default function Signup() {
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [thumbnail, setThumbnail] = useState(null)
@@ -49,15 +50,15 @@ export default function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        signup(email, password, thumbnail )
+        signup(email, password, thumbnail, name )
     }
 
     return (
 
         <form className='auth-form' onSubmit={handleSubmit}>
-            <h2>signup</h2>
+            <h2>Signup</h2>
             <label>
-                <span>email:</span>
+                <span>Email:</span>
                 <input
                     required
                     type='email'
@@ -66,7 +67,16 @@ export default function Signup() {
                 />
             </label>
             <label>
-                <span>password:</span>
+                <span>First name:</span>
+                <input
+                    required
+                    type='string'
+                    onChange={e => setName(e.target.value)}
+                    value={name}
+                />
+            </label>
+            <label>
+                <span>Password:</span>
                 <input
                     required
                     type='password'

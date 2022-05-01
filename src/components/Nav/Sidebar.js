@@ -37,7 +37,7 @@ const signOutUser = async() => {
         <div className='sidebar'>
             <div className='sidebar-content'>
                 <div className='user'>
-                    <Avatar src={user.photoURL} />
+                    <Avatar src={'#'} />
                     <p>hey {user.displayName}!</p>
 
                 </div>

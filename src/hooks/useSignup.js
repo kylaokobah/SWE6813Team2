@@ -13,7 +13,7 @@ export const useSignup = () => {
   const navigate = useNavigate();
 
 
-const signup = async (email, password, avatar, createdAt) => {
+const signup = async (email, password, thumbnail, createdAt) => {
 
     setError(null)
     setIsPending(true)
@@ -29,9 +29,9 @@ const signup = async (email, password, avatar, createdAt) => {
 
       //adds thumbnail to firebase storage file titled: thumbnails
       //const uploadPath = 'gs://gamers-meet-293c1.appspot.com/avatar/user/userId'
-      const uploadPath =`avatar/${res.user.uid}/${avatar.name}`
+      const uploadPath = `thumbnails/${res.user.uid}/${thumbnail.name}`
       //const img = await storageDb.ref(uploadPath).put(avatar)
-      const img = await storageDb.ref(uploadPath).put(avatar)
+      const img = await storageDb.ref(uploadPath).put(thumbnail)
       const imgUrl = await img.ref.getDownloadURL()
 
        // add display name to user
@@ -47,9 +47,8 @@ const signup = async (email, password, avatar, createdAt) => {
       await firestoreDb.collection('user').doc(res.user.uid).set({
         online: true,
         photoURL: imgUrl,
-        email: email.res.user,
-        password: password.res.user,
-        userId: res.user.userId,
+        email,
+        password,
         createdAt: timestamp.fromDate(new Date()),
       })
      console.log(res.user.uid, "Here are the passing details");
@@ -76,10 +75,10 @@ const signup = async (email, password, avatar, createdAt) => {
     }
   }
 
- /* useEffect(() => {
+  useEffect(() => {
     return () => setIsCancelled(true)
   }, [])
 
   return { signup, error, isPending }
-*/
+
 }

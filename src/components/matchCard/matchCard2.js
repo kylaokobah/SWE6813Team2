@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -39,7 +39,7 @@ export default function matchCard({onClick, epicName, isOnline, photoURL, langua
 
 
    //fetch
-    const profileStorageRef = ref(storageDb)
+    const profileStorageRef = ref('')
     console.log()
 
 
