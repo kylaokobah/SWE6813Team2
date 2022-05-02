@@ -14,8 +14,10 @@ $gray-700: #333333;
 
 @mixin layoutGrid {
   display:grid;
-  grid-template-columns: repeat(12,1fr);
-  height:100%;
+  grid-template-columns: repeat(3fr,2fr);
+  align-items: start;
+  grid-gap:60px
+  //height:100%;
 }
 
 
@@ -44,7 +46,8 @@ $gray-700: #333333;
     }
   
     .cardImage {
-      background-size:cover;
+      background-size: 97px 97px;
+
       background-position: center;
       background-repeat: no-repeat;
       min-height:200px;

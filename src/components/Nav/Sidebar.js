@@ -1,7 +1,6 @@
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 //components
 import Avatar from '../Avatar/Avatar'
-import OnlineUsers from '../OnlineUsers/OnlineUsers'
 //styling
 import '../../styles/Sidebar.css'
 //icons for nav links
@@ -21,7 +20,7 @@ import { signOut } from '@firebase/auth';
 
 
 export default function Sidebar() {
-/*const navigate= useNavigate();
+const navigate= useNavigate();
 const signOutUser = async() => {
       try {
           await signOut(authDb);
@@ -29,7 +28,7 @@ const signOutUser = async() => {
       } catch (err) {
           console.log(err)
       }
-  }*/
+  }
 
     const { user } = useAuthContext()
 
@@ -37,8 +36,8 @@ const signOutUser = async() => {
         <div className='sidebar'>
             <div className='sidebar-content'>
                 <div className='user'>
-                    <Avatar src={'#'} />
-                    <p>hey {user.displayName}!</p>
+                    <Avatar src={user.photoURL} />
+                    <p>hey {user.epicName}!</p>
 
                 </div>
                 <nav className='links'>
@@ -58,7 +57,7 @@ const signOutUser = async() => {
                       <li>
                              <NavLink to='/match-history'>
                                   <RotateLeftIcon/>
-                                   <span>Find a Match</span>
+                                   <span>Previous Matches</span>
                               </NavLink>
                        </li>
                         <li>

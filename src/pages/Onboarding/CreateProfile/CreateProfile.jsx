@@ -10,7 +10,6 @@ import React, { useRef, useState } from 'react'
    //routing
    import {useNavigate, useParams} from "react-router-dom";
 
-
    //Redux
    import { useSelector, useDispatch } from 'react-redux';
 
@@ -27,40 +26,47 @@ import React, { useRef, useState } from 'react'
        function CreateProfile() {
        const [epicName,setEpicName] = useState('');
        const [platform,setPlatform] = useState('');
-       const [language,setLanguage] = useState('');
-       const [matchesPlayed,setMatchesPlayed] = useState('');
-       const [numSolo,setNumSolo] = useState('');
-       const [numDuo,setNumDuo] = useState('');
-       const [numSquad,setNumSquad] = useState('');
-       const [numTrio,setNumTrio] = useState('');
-       const [timePlayed,setTimePlayed] = useState('');
-       const [winPercentage,setWinPercentage] = useState('');
+       const [matchesPlayed,setMatchesPlayed] = useState();
+       const [winsTotal,setWinsTotal] = useState();
+       const [kd,setKd] = useState();
+       const [kills,setKills] = useState();
+       const [timePlayed,setTimePlayed] = useState();
+       const [winPercentage,setWinPercentage] = useState();
        const [bio,setBio] = useState('');
-       const [compareView, setCompareView] = useState('all');
        const [message,setMessage] = useState(null);
-   // Redux
-         const dispatch = useDispatch();
+
+ //API
+   const Faker = require("@faker-js/faker");
+   const faker = Faker.faker;
 
      let navigate = useNavigate();
      let params = useParams();
 
      const submitForm = async(e) => {
-       e.preventDefault();
+     e.preventDefault();
+      const winsTotal= faker.datatype.number({min:1, max:999999});
+                        const matchesPlayed= faker.datatype.number({min:1, max:999999});
+                        const kills= faker.datatype.number({min:1, max:99999});
+                        const kd= faker.datatype.float({min: .01, max:4, fixed: 2})
+                        const time= faker.datatype.number({min:60});
+
+                                 //calculations
+                                 const timePlayed= time/60;
+                                 const winPercentage= winsTotal/matchesPlayed;
 
        try {
          updateProfile(authDb.currentUser, {
            epicName
+
          })
-         let t = await setDoc(doc(firestoreDb,"player_profile", authDb.res.user.uid), {
+         let t = await setDoc(doc(firestoreDb,"player_profile", authDb.currentUser.uid), {
            aboutMe: bio,
            isOnline: true,
-           language,
-           matchesPlayed,
-           numSolo,
-           numDuo,
-           numSquad,
-           numTrio,
+           //matchesPlayed: faker.datatype.number({min:1, max:999999}),
            timePlayed,
+           kills,
+           kd,
+           winsTotal,
            winPercentage
          });
          console.log(t);
@@ -76,6 +82,7 @@ import React, { useRef, useState } from 'react'
        setValue(e.target.value);
      }
 
+
      return (
        <div className={styles.createProfileSection}>
          <header className={styles.createProfileHeader}>
@@ -88,6 +95,7 @@ import React, { useRef, useState } from 'react'
              <input type='text' value={epicName} name='Please enter your Fortnite Epic name:' onChange={(e) => handleChange(e,setEpicName)} />
              <label htmlFor='bio'>About Me</label>
              <textarea type='text' name='bio' value={bio} onChange={(e) => handleChange(e,setBio)} />
+
              <button type='submit'>Next</button>
          </form>
        </div>

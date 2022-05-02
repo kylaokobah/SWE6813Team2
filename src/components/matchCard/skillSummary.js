@@ -1,45 +1,82 @@
 import { useFirestore } from '../../database/collection/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { useNavigate } from 'react-router-dom'
-
 import Avatar from '../../components/Avatar/Avatar'
+import React from 'react'
+import styles from "../../styles/Profilestyles.module.scss";
+import {IoLogoFacebook} from "react-icons/io";
+import { RiLinkedinFill } from 'react-icons/ri';
 
-export default function ProjectSummary({ project }) {
-
-    const { deleteDocument } = useFirestore('projects')
-    const { user } = useAuthContext()
-    const navigate = useNavigate()
-
-    const handleClick = (e) => {
-        deleteDocument(project.id)
-        navigate('/')
-    }
-    
-    const showDeleteBtn = () => {
-        return (project.createdBy.id === user.uid)
-    }
-
-    return (
-        <div>
-            <div className="project-summary">
-                <h2 className="page-title">{project.name}</h2>
-                <p>by {project.createdBy.displayName}</p>
-                <p className="due-date">
-                    project due by {project.dueDate.toDate().toDateString()}
-                </p>
-                <p className="project-details">
-                    {project.details}
-                </p>
-                <h4>project is assigned to:</h4>
-                <div className='assigned-users'>
-                    {project.assignedUsersList.map(user => (
-                        <div key={user.id}>
-                            <Avatar src={user.photoURL} />
-                        </div>
-                    ))}
-                </div>
+function skillSummary ({onClick, name,age,img}) {
+  return (
+    <div className={styles.profileWrapper}>
+      <i className="fa-solid fa-xmark" />
+      <div onClick={onClick} className={styles.background} />
+      <div className={styles.profileModal}>
+        <div className={`${styles.inner} ${styles.profileHeader}`}>
+          <div style={{backgroundImage:`url(${img})`}} className={styles.profileImage} />
+          <div className={styles.textContent}>
+            <div className={styles.textHeader}>
+              <h4>{name}</h4>
+              <p>{age}</p>
+              <button className={styles.chatButton}>Chat</button>
+              <div className={styles.socialsFlex}>
+                <RiLinkedinFill/>
+                <IoLogoFacebook />
+              </div>
             </div>
-            {showDeleteBtn() && <button className='btn' onClick={handleClick}>mark as complete</button>}        
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor.</p>
+          </div>
         </div>
-    )
+        <div className={` ${styles.profileContent} ${styles.inner}`}>
+          <div className={styles.flexItem}>
+            <h6 className={styles.subHeading}>
+              Skills
+            </h6>
+            <div className={styles.flexSection}>
+              <div className={styles.tag}>
+                  Design Thinking
+              </div>
+              <div className={styles.tag}>
+                  Leadership
+              </div>
+              <div className={styles.tag}>
+                  Web Development
+              </div>
+            </div>
+          </div>
+          <div className={styles.flexItem}>
+            <h6 className={styles.subHeading}>
+              Interests
+            </h6>
+            <div className={styles.flexSection}>
+              <div className={styles.tag}>
+                  Cooking
+              </div>
+              <div className={styles.tag}>
+                  Photography
+              </div>
+              <div className={styles.tag}>
+                  Travelling
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.workExperience}>
+          <div className={styles.inner}>
+            <div>
+              <h6 className={styles.smallHeading}>Previous experience</h6>
+              <p>Worked as a <span>Lead Designer</span> for <span>Google</span></p>
+            </div>
+            <div>
+              <h6 className={styles.smallHeading}>Wants to learn</h6>
+              <p>How to become an <span>Electrician</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
+
+export default skillSummary

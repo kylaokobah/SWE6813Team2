@@ -1,11 +1,11 @@
 .sidebar {
     width: 300px;
     min-width: 300px;
-    background: #313338;
+    background: var(--primary-color);
     min-height: 100vh;
     box-sizing: border-box;
     position: relative;
-    color: #FFF;
+    color: black;
     float: left;
 
   }
@@ -39,10 +39,11 @@
   }
   .sidebar .links img {
     margin-right: 10px;
+    filter: invert(100%);
 
   }
   .sidebar .links a.active {
-    color: #fff;
+    color: black;
     background: var(--bg-color);
     border-radius: 20px 0 0 20px;
   }

@@ -5,8 +5,6 @@
     box-sizing: border-box;
     background: #fbfbfb;
     color: #0f0d0d;
-    position: relative;
-    overflow-y: scroll;
 
   }
   .user-list h2 {

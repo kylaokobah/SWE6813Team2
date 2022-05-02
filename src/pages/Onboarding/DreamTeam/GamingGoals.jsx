@@ -12,7 +12,6 @@ import { PLATFORM } from '../../../utils/consts';
 import PCIcon from '../../../assets/images/PCIcon';
 import PSNIcon from '../../../assets/images/PSNIcon';
 import XBoxIcon from '../../../assets/images/XBoxIcon';
-
 const gamingGoalsList = [{
 
   id: 0,
@@ -43,44 +42,29 @@ const gamingPlatformList = [{
   selected: false
 }]
 
-const teamSizeList = [{
-
-  id: 0,
-  name: "No, it doesn't matter",
-  selected: false
-}, {
-  id: 1,
-  name: 'Yes, Duo',
-  selected: false
-}, {
-  id: 2,
-  name: 'Yes, Trio',
-  selected: false
-}, {
-   id: 3,
-   name: 'Yes, Squad',
-   selected: false
- }]
-
 const gamingGoalIcons = [<EmojiEventsIcon/> , <SportsEsportsIcon />, <EmojiPeopleIcon />]
-
 const gamingTypes = ['Competitive', 'Aggressive', 'Perfectionist', 'Explorer', 'Socializer'];
 function GamingGoals() {
-  const [gamingGoals, setGoals] = useState(gamingGoalsList)
+  const [gamingGoals, setGoals] = useState(gamingGoalsList);
   const [gamingPlatform, setPlatform] = useState(gamingPlatformList);
   const [gamingType, setType] = useState();
-  const [teamSize, setTeamSize] = useState();
   const navigate = useNavigate();
-  const selectGoals = (index) => {let gamingGoalsCopy = [...gamingGoals];
+ /* const selectGoals = (index) => {
+  let gamingGoalsCopy = [...gamingGoals];
 
-  const selected= gamingGoalsCopy[index].selected === selected;
-  setGoals(gamingGoalsCopy);}
+  gamingGoalsCopy[index].selected = true;
+  setGoals(gamingGoalsCopy);}*/
 
   const submitSection = async() => {
-    const selectedGoals = gamingGoals.filter(goal => goal.selected).map(goal => goal.id);
+    //const selectedGoals = gamingGoals.filter(goal => goal.selected).map(goal => goal.id);
     try {
-      let test = await updateDoc(doc(firestoreDb,"find_match", authDb.res.user.uid),
-      {gamingGoals: gamingGoals, gamingType: gamingType, gamingPlatform: gamingPlatform, teamSize: teamSize});
+      let test = await updateDoc(doc(firestoreDb,"player_profile", authDb.currentUser.uid),
+      {
+      gamingGoals: gamingGoals,
+      gamingType: gamingType,
+      gamingPlatform: gamingPlatform
+       }
+     );
 
       navigate(`/dashboard`,{replace: true});
       }
@@ -98,28 +82,30 @@ function GamingGoals() {
       <div className={styles.subContent}>
         <h5 className={styles.subHeading}>Why are you looking for Gaming Partners? </h5>
         <div className={styles.gamingGoalsContent}>
-          {gamingGoals?.map((goal,index) => {
-            return (<div onClick={() => setGoals(index)} className={`${styles.gamingGoalItem} ${index ==gamingGoals ? styles.selected : ''}`}>
-              {gamingGoalIcons[index]}{goal.name}
+          {gamingGoalsList.map((goal,index) => {
+            return (
+            <div onClick={() => setGoals(index)} className={`${styles.gamingGoalItem} ${index == gamingGoals ? styles.selected : ''}`}>
+              {gamingGoalIcons[index]}
+              {goal.name}
               </div>)}
               )}
               </div>
               </div>
               <div className={styles.subContent}>
                 <h5 className={styles.subHeading}>Which platform do you prefer? </h5>
-                <div>
-  className={styles.gamingGoalsContent}>
-    {gamingPlatformList.map((goal,index) => {
+                <div className={styles.gamingGoalsContent}>
+    {gamingPlatformList.map((platform, index) => {
       return (
-      <div onClick={() => setPlatform(index)} className={`${styles.gamingGoalItem} ${index == gamingPlatform? styles.selected : ''}`}>
+      <div onClick={() => setPlatform(index)} className={`${styles.gamingGoalItem} ${index == gamingPlatform ? styles.selected : ''}`}>
         {gamingGoalIcons[index]}
-        {goal.name}</div>)}
+        {platform.name}</div>)}
+
         )}
         </div>
         </div>
                 <div className={styles.subContent}>
   <h5 className={styles.subHeading}>What Is Your Online Playing Style?</h5>
-  <div className={styles.gamingTypes}> {gamingTypes.map((type,index) => {
+  <div className={styles.gamingTypes}>{gamingTypes.map((type,index) => {
     return (
     <div onClick={() => setType(index)} className={`${styles.gamingType} ${index == gamingType ? styles.selected : ''}`}>
       <div style={{backgroundImage: 'url(https://cdn.dribbble.com/users/1355613/screenshots/13618145/media/2d37a0661dc66e6c9b260246f1db2b23.png?compress=1&resize=400x300)'}}  className={`${styles.img} `} />
@@ -129,27 +115,9 @@ function GamingGoals() {
       </div>
       </div>
       </div>
-
-
-
-      <div className={styles.subContent}>
-       <h5 className={styles.subHeading}>Does Team size matter?</h5>
-       <div className={styles.teamSize}>{gamingTypes.map((type,index) => {
-         return (
-         <div onClick={() => setTeamSize(index)} className={`${styles.teamSize} ${index == teamSize ? styles.selected : ''}`}>
-           <div style={{backgroundImage: 'url(https://cdn.dribbble.com/users/1355613/screenshots/13618145/media/2d37a0661dc66e6c9b260246f1db2b23.png?compress=1&resize=400x300)'}}  className={`${styles.img} `} />
-           <p>{type}</p>
-           </div> )}
-           )}
-           </div>
-           </div>
-
-           <button onClick={submitSection}>Next</button>
-           </div>
-
-)
-
+      <button onClick={submitSection}>Next</button>
+      </div>
+      )
     }
     export default GamingGoals
-
 

@@ -1,20 +1,19 @@
 import React from 'react'
-import Profile from '../Profile/Profile';
-import AccountSidebar from './AccountSidebar/AccountSidebar'
-import styles from "./styles.module.scss";
-
+import styles from "../../styles/Profilestyles.module.scss"
+//hooks
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 function ProfilePage() {
-
+const { user } = useAuthContext()
   return (
     <div className={styles.profileWrapper}>
-      <AccountSidebar />
+
       <div className={styles.profileContent}>
         <div className={styles.createProfileSection}>
           <header className={styles.createProfileHeader}>
             <div className={styles.textBox}>
               <div className={styles.profile}></div>
-              <p>Sarah K</p>
+               <p>hey {user.epicName}!</p>
             </div>
           </header>
           <form className={styles.createProfileForm}>

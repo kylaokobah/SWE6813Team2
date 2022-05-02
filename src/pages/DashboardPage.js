@@ -6,6 +6,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 
 import '../styles/Dashboard.css'
 import Sidebar from '../components/Nav/Sidebar'
+import OnlineUsers from "../components/OnlineUsers/OnlineUsers"
 
 export default function Dashboard() {
 
@@ -48,6 +49,7 @@ export default function Dashboard() {
                 />} */}
                 {users  && <MatchedUserList match={ users } />}
             </div>
+            <OnlineUsers/>
         </>
     )
 }

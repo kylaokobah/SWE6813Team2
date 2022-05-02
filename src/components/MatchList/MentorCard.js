@@ -4,6 +4,7 @@ import {FiBriefcase} from "react-icons/fi";
 import {HiOutlineLocationMarker} from "react-icons/hi";
 import {MdWavingHand} from "react-icons/md";
 
+
 function MentorCard({onClick, name,age,img}) {
   return (
     <div onClick={onClick} className={styles.card}>
@@ -13,7 +14,7 @@ function MentorCard({onClick, name,age,img}) {
           <div className={styles.contentHeader}>
             <div className={styles.textBox}>
               <h4>{name}</h4>
-              <p>{age} </p>
+              <p> Account Id: {age} </p>
             </div>
             <div className={styles.userConnection}>
               <MdWavingHand />
@@ -44,7 +45,7 @@ function MentorCard({onClick, name,age,img}) {
             </div>
           </div>
         </div>
-        <button className={styles.visitProfileButton}>Visit Profile</button>
+        <button className={styles.visitProfileButton} onClick= {onClick}>Visit Profile</button>
       </div>
     </div>
   )

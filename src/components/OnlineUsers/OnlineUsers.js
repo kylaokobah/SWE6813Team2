@@ -1,13 +1,17 @@
+import React from 'react'
 import { useCollection } from '../../database/collection/useCollection'
 //components
 import Avatar from '../Avatar/Avatar'
 //styling
 import '../../styles/OnlineUsers.css'
+//hooks
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 
 export default function OnlineUsers() {
+    const { user } = useAuthContext();
 
-    const { documents, error } = useCollection('user')
+    const { documents, error } = useCollection("user");
 
     return(
         <div className='user-list'>
@@ -16,7 +20,7 @@ export default function OnlineUsers() {
             {documents && documents.map(user => (
                 <div key={user.id} className='user-list-item'>
                     {user.online && <span className='online-user'></span>}
-                    <span>{user.displayName}</span>
+                    <span>{user.epicName}</span>
                     <Avatar src={user.photoURL} />
                 </div>
             ))}
