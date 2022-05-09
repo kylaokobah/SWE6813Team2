@@ -1,19 +1,8 @@
 steps:
-  # install dependencies for frontend app
+  # check version
   - name: 'gcr.io/cloud-builders/npm'
-    entrypoint: node
-    args: [ 'install' ]
-    dir: 'src'
-    wait_for: [ '-' ]
-
-
-  # build frontend app with webpack
-      - name: 'gcr.io/cloud-builders/npm'
-        entrypoint: node
-        dir: 'src'
-        args: [ 'run', 'build' ]
-        wait_for: [ 'npm-install' ]
-
+    entrypoint: 'node'
+    args: [ '--version' ]
 
   #Build the image
   - id: docker-build
