@@ -25,10 +25,10 @@ steps:
       'deploy',
       'cloudrunservice',
       '--image',
-      'gcr.io/${_PROJECT_ID}/cloudrunservice',
+      'gcr.io/${PROJECT_ID}/cloudrunservice',
       '--platform',
       'managed',
     ]
 
   images:
-    - gcr.io/${_PROJECT_ID}/cloudrunservice
+    - gcr.io/${PROJECT_ID}/cloudrunservice
