@@ -1,17 +1,15 @@
 steps:
   # install dependencies for frontend app
-  - id: npm-install
-    name: node
-    entrypoint: npm
+  - name: 'gcr.io/cloud-builders/npm'
+    entrypoint: node
     args: [ 'install' ]
     dir: 'src'
     wait_for: [ '-' ]
 
 
   # build frontend app with webpack
-      - id: npm-build
-        name: node
-        entrypoint: npm
+      - name: 'gcr.io/cloud-builders/npm'
+        entrypoint: node
         dir: 'src'
         args: [ 'run', 'build' ]
         wait_for: [ 'npm-install' ]
