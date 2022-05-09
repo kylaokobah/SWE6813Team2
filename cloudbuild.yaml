@@ -1,40 +1,65 @@
-# In this directory, run the following command to build this builder.
-# $ gcloud builds submit . --config=cloudbuild.yaml
-
-steps:
-  # Pull the latest gcloud image.
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', 'gcr.io/cloud-builders/gcloud']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--tag=gcr.io/$PROJECT_ID/git', '.']
-
-  # Clone a public repo and write its revision to a VERSION file.
-  - name: 'gcr.io/$PROJECT_ID/git'
-    args: ['clone', 'https://github.com/GoogleCloudPlatform/cloud-builders.git']
-    dir: 'examples/version-file'
-  # The Dockerfile here uses this git builder as its base image.
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--tag=version_file', '.']
-    dir: 'examples/version-file'
-  - name: 'version_file'
-    args: ['VERSION']
-    dir: 'examples/version-file/cloud-builders'
-  # Prove that the file exists.
-  - name: 'alpine'
-    args: ['ash', '-c', 'echo "Version: $(cat VERSION)"']
-    dir: 'examples/version-file/cloud-builders'
-
-  # Set a global configuration and check that it's persisted.
-  # This configuration won't be included in the resulting builder image.
-  - name: 'gcr.io/$PROJECT_ID/git'
-    args: ['config', '--global', 'test.foo', 'bar']
-  - name: 'gcr.io/$PROJECT_ID/git'
-    entrypoint: 'bash'
-    args: ['-c', 'git config --global --get test.foo | grep ^bar$']
-
-  # Clone a private repo belonging to the project.
-  - name: 'gcr.io/$PROJECT_ID/git'
-    args: ['clone', 'https://source.developers.google.com/p/$PROJECT_ID/r/default']
-
-images: ['gcr.io/$PROJECT_ID/git']
-
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: continuous
+  namespace: '596714399514'
+  selfLink: /apis/serving.knative.dev/v1/namespaces/596714399514/services/continuous
+  uid: d78c10da-ca90-4db1-8728-4069cafdb34f
+  resourceVersion: AAXelc5j1HA
+  generation: 2
+  creationTimestamp: '2022-05-09T15:24:22.087410Z'
+  labels:
+    managed-by: gcp-cloud-build-deploy-cloud-run
+    gcb-trigger-id: 2f683e40-9e9c-4b0d-80d6-0802049c5bef
+    cloud.googleapis.com/location: us-east1
+  annotations:
+    run.googleapis.com/client-name: cloud-console
+    serving.knative.dev/creator: gamersmeet6813@gmail.com
+    serving.knative.dev/lastModifier: gamersmeet6813@gmail.com
+    client.knative.dev/user-image: gcr.io/cloudrun/placeholder
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      name: continuous-placeholder
+      annotations:
+        run.googleapis.com/client-name: cloud-console
+        autoscaling.knative.dev/maxScale: '100'
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: 596714399514-compute@developer.gserviceaccount.com
+      containers:
+        - image: gcr.io/cloudrun/placeholder
+          ports:
+            - name: http1
+              containerPort: 8080
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+  traffic:
+    - percent: 100
+      latestRevision: true
+status:
+  observedGeneration: 2
+  conditions:
+    - type: Ready
+      status: 'True'
+      lastTransitionTime: '2022-05-09T15:24:37.695600Z'
+    - type: ConfigurationsReady
+      status: 'True'
+      lastTransitionTime: '2022-05-09T15:24:37.415899Z'
+    - type: RoutesReady
+      status: 'True'
+      lastTransitionTime: '2022-05-09T15:24:37.695600Z'
+  latestReadyRevisionName: continuous-placeholder
+  latestCreatedRevisionName: continuous-placeholder
+  traffic:
+    - revisionName: continuous-placeholder
+      percent: 100
+      latestRevision: true
+  url: https://continuous-fk6hxckzoq-ue.a.run.app
+  address:
+    url: https://continuous-fk6hxckzoq-ue.a.run.app
