@@ -1,18 +1,48 @@
 steps:
+  # install dependencies for frontend app
+  - id: npm-install
+    name: node
+    entrypoint: npm
+    args: [ 'install' ]
+    dir: 'src'
+    wait_for: [ '-' ]
+
+
+  # build frontend app with webpack
+      - id: npm-build
+        name: node
+        entrypoint: npm
+        dir: 'src'
+        args: [ 'run', 'build' ]
+        wait_for: [ 'npm-install' ]
+
+
   #Build the image
-  - name: 'gcr.io/cloud-builders/docker'
+  - id: docker-build
+    name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/gamers-meet-293c1/myapp:v1', '.']
 
 
   #Push the image
-  - name: 'gcr.io/cloud-builders/docker'
+  - id: gcr-push
+    name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/gamers-meet-293c1/myapp:v1']
 
-  # Set a global configuration and check that it's persisted.
-  # This configuration won't be included in the resulting builder image.
-  - name: 'gcr.io/gamers-meet-293c1/git'
-    args: ['config', '--global', 'test.foo', 'bar']
-  - name: 'gcr.io/gamers-meet-293c1/git'
-    entrypoint: 'bash'
-    args: ['-c', 'git config --global --get test.foo | grep ^bar$']
+  # Deploy container image to Cloud Run
+  - id: cloud-run
+    name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    dir: 'src'
+    entrypoint: gcloud
+    args: [
+      'run',
+      'deploy',
+      'cloudrunservice',
+      '--image',
+      'gcr.io/${_PROJECT_ID}/cloudrunservice',
+      '--platform',
+      'managed',
+    ]
+    wait_for: [ 'gcr-push' ]
 
+  images:
+    - gcr.io/${_PROJECT_ID}/cloudrunservice
