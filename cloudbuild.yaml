@@ -26,9 +26,8 @@ steps:
       'cloudrunservice',
       '--image',
       'gcr.io/${_PROJECT_ID}/cloudrunservice',
-      '--platform',
       '--region',
       'managed',
     ]
-    wait_for: [ 'gcr-push' ]
+
 
