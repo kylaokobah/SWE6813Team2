@@ -8,8 +8,8 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/gamers-meet-293c1/myapp:v1']
 
-  # deploy container image to GKE
-  - name: "gcr.io/cloud-builders/cloudrunservice"
+  # deploy container image to cloudrunservice
+  - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - run
       - --filename= deployment.yaml/
