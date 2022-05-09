@@ -4,32 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="added template cards for matches, matching algorithm">
-      <change afterPath="$PROJECT_DIR$/firebase-debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav/App.css" afterDir="false" />
+    <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="deleted unecessary files">
+      <change afterPath="$PROJECT_DIR$/src/utils/algorithm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchList/MatchList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/MatchList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchList/MentorCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/MentorCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchList/mentorCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/mentorCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OnlineUsers/OnlineUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OnlineUsers/OnlineUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/matchCard/matchCard2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/matchCard/skillSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/matchCard/skillSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/collection/useCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/collection/useCollection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DashboardPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/CreateProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/CreateProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/createProfile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/createProfile.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/DreamTeam/GamingGoals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/DreamTeam/GamingGoals.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/DreamTeam/GamingGoals.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/DreamTeam/GamingGoals.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/onboarding.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/onboarding.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/OnlineUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/OnlineUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Profilestyles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Profilestyles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/matchList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/matchList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/findMatchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/findMatchPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651431719830</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="deleted unecessary files">
+      <created>1651519908607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651519908607</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +194,8 @@
     <MESSAGE value="On boarding form, side bar navigation, and online users added. Register errors fixed." />
     <MESSAGE value="fortnitetracker, axios" />
     <MESSAGE value="added template cards for matches, matching algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="added template cards for matches, matching algorithm" />
+    <MESSAGE value="deleted unecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted unecessary files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

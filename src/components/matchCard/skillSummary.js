@@ -7,7 +7,7 @@ import styles from "../../styles/Profilestyles.module.scss";
 import {IoLogoFacebook} from "react-icons/io";
 import { RiLinkedinFill } from 'react-icons/ri';
 
-function skillSummary ({onClick, name,age,img}) {
+function skillSummary ({onClick, name,age, img}) {
   return (
     <div className={styles.profileWrapper}>
       <i className="fa-solid fa-xmark" />

@@ -52,7 +52,7 @@ import React, { useRef, useState } from 'react'
 
                                  //calculations
                                  const timePlayed= time/60;
-                                 const winPercentage= winsTotal/matchesPlayed;
+                                 const winPercentage= (winsTotal/matchesPlayed) * 100;
 
        try {
          updateProfile(authDb.currentUser, {

@@ -29,7 +29,7 @@ export default function FindMatchPage {
         <h3 className="text-2xl font-extrabold italic uppercase my-4">
           Auto Generated User Registration
           <br />
-          Click to Generate and Register
+          Click to Generate
         </h3>
         Open console to verify that user generation is successful! (Press F12)
       </div>

@@ -9,10 +9,19 @@ export default function MatchList({ match }) {
     return (
 
         <div className='match-list'>
+
             {match && match.slice(0,10).map(user => (
 
                <>
-                    <MentorCard name={user.EpicName} age={user.userId} img={user.photoURL} />
+                    <MentorCard
+                    name={user.EpicName}
+                    age={user.userId}
+                    img={user.photoURL}
+                    winTotal= {user.winsTotal}
+                    timePlayed= {user.timePlayed}
+                    kills= {user.kills}
+                    platform= {user.RandomPlatform}
+                    createdAt= {user.createdAt}/>
                </>
             ))}
         </div>

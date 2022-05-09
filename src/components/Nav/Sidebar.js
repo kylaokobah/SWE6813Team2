@@ -49,16 +49,18 @@ const signOutUser = async() => {
                              </NavLink>
                         </li>
                         <li>
-                                <NavLink to='/findMatch'>
+                                <NavLink to='/dashboard'>
                                 <SearchIcon/>
                                 <span>Find a Match</span>
-                            </NavLink>
+                                </NavLink>
+
                     </li>
                       <li>
-                             <NavLink to='/match-history'>
+                                  <NavLink to='/dashboard'>
                                   <RotateLeftIcon/>
                                    <span>Previous Matches</span>
-                              </NavLink>
+                                   </NavLink>
+
                        </li>
                         <li>
                                 <NavLink to='/profile'>
