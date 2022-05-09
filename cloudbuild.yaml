@@ -15,19 +15,5 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/gamers-meet-293c1/myapp:v1']
 
-  # Deploy container image to Cloud Run
-  - id: cloud-run
-    name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    dir: 'src'
-    entrypoint: gcloud
-    args: [
-      'run',
-      'deploy',
-      'cloudrunservice',
-      '--image',
-      'gcr.io/${_PROJECT_ID}/cloudrunservice',
-      '--region',
-      'managed',
-    ]
 
 
