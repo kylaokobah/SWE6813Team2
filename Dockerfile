@@ -1,10 +1,12 @@
-FROM node:16.11.25 as build
+FROM node:16 as build
 
-WORKDIR /SWE6813TEAM2
+WORKDIR /usr/src/app
 
 COPY package*.json .
-RUN npm install
+RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:1.19
+
+EXPOSE 8080
+CMD [ "node", "index.js" ]
