@@ -1,6 +1,6 @@
 FROM node:16 as build
 
-WORKDIR /usr/src/App/
+WORKDIR /usr/src/app/
 
 COPY package*.json .
 RUN npm ci
