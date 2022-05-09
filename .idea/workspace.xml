@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f09a3a-c33c-4221-94ae-0945a25078b3" name="Changes" comment="deleted unecessary files">
-      <change afterPath="$PROJECT_DIR$/src/utils/algorithm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchList/MatchList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/MatchList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchList/MentorCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/MentorCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchList/mentorCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchList/mentorCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/matchCard/skillSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/matchCard/skillSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DashboardPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/CreateProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding/CreateProfile/CreateProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/findMatchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/findMatchPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
