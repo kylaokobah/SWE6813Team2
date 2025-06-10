@@ -3,7 +3,7 @@ import { query, where } from "firebase/firestore";
 import {RandomGamingGoals, RandomGamingType, RandomPlatform, RandomTeamSize} from '../../mock-utils';
 import {winPercentage} from "../utils/calculations.js"
 
-export default function FindMatchPage {
+export default function FindMatchPage() {
   const { id } = useParams()
   const { documents, error } = useCollection('find_match', id)
   const { user } = useAuthContext()
@@ -15,7 +15,7 @@ export default function FindMatchPage {
     const ref = collection(db, "player_profile");
     //querying all online users to find a match
     const competitiveStatsQuery = query(ref, where("isOnline", "==", "true"), where("winPercentage", ">", 80 ));
-    const snapShot = await getDocs(q);
+    const snapShot = await getDocs(competitiveStatsQuery);
 
   };
 
@@ -46,6 +46,4 @@ export default function FindMatchPage {
       </div>
     </div>
   );
-};
-
-export default GenerateUserPage;
+}
