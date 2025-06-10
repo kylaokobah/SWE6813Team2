@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import { useAuthContext } from '../../hooks/useAuthContext'
 import DashboardPage from '../../pages/DashboardPage.js';
-//import findMatchPage from '../../pages/findMatchPage';
+import FindMatchPage from '../../pages/findMatchPage.js';
 import MatchHistoryPage from '../../pages/MatchHistoryPage.jsx';
 import ProfilePage from '../../pages/ProfilePage/ProfilePage.jsx';
 import ProtectedRoute from './protectedRoute';
@@ -26,7 +26,7 @@ const { user, authIsReady } = useAuthContext()
         <Route path='/findMatch' element={
         <>
          {user && <Sidebar />}
-        <findMatchPage/>
+        <FindMatchPage />
         </>
         } />
         <Route path='/match-history' element={
